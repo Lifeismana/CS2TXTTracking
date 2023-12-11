@@ -18,6 +18,15 @@ jobs:
         concurrency:
             group: ${{ github.workflow }}
         steps:
+            # Keeping this here in case we need more than 45GB of space in the future
+            # - name: Maximize build space 
+            #   uses: easimon/maximize-build-space@master 
+            #   with: 
+            #     swap-size-mb: 1024 
+            #     remove-dotnet: 'true' 
+            #     remove-android: 'true' 
+            #     remove-haskell: 'true' 
+            #     remove-codeql: 'true' 
             - name: More space
               shell: bash
               run: |
