@@ -1,0 +1,24 @@
+name: Execute
+
+on:
+    workflow_dispatch:
+        inputs:
+            manifests:
+                description: 'Manifests to use'
+                required: false
+                default: ''
+
+jobs:
+    
+    execute:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        environment: Execution
+        steps:
+            - uses: actions/checkout@v3
+            - uses: docker://ghcr.io/lifeismana/cs2-vpk-decompiler-github:latest
+              env:
+                GIT_NAME: ${{ secrets.GIT_NAME }}
+                GIT_EMAIL: "${{ secrets.GIT_EMAIL }}"
+                MANIFESTS: "${{ inputs.manifests }}"
