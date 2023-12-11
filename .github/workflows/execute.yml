@@ -24,6 +24,7 @@ jobs:
               run: |
                 git config --global user.name "$GIT_NAME"
                 git config --global user.email "$GIT_EMAIL"
+                mkdir -pm 777 /home/runner/work/_temp/_github_home/.local
             - uses: docker://ghcr.io/lifeismana/cs2-vpk-decompiler-github:latest
               env:
                 MANIFESTS: "${{ inputs.manifests }}"
