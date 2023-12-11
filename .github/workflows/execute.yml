@@ -17,8 +17,13 @@ jobs:
         environment: Execution
         steps:
             - uses: actions/checkout@v3
-            - uses: docker://ghcr.io/lifeismana/cs2-vpk-decompiler-github:latest
+            - shell: bash
               env:
                 GIT_NAME: ${{ secrets.GIT_NAME }}
                 GIT_EMAIL: "${{ secrets.GIT_EMAIL }}"
+              run: |
+                git config --global user.name "$GIT_NAME"
+                git config --global user.email "$GIT_EMAIL"
+            - uses: docker://ghcr.io/lifeismana/cs2-vpk-decompiler-github:latest
+              env:
                 MANIFESTS: "${{ inputs.manifests }}"
