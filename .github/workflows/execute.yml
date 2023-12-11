@@ -16,6 +16,14 @@ jobs:
             contents: write
         environment: Execution
         steps:
+            - name: Maximize build space
+              uses: easimon/maximize-build-space@master
+              with:
+                swap-size-mb: 1024
+                remove-dotnet: 'true'
+                remove-android: 'true'
+                remove-haskell: 'true'
+                remove-codeql: 'true'
             - uses: actions/checkout@v3
             - uses: docker://ghcr.io/lifeismana/cs2-vpk-decompiler-github:latest
               env:
