@@ -1,0 +1,253 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 4
+	m_BoundingBoxMin = 
+	[
+		-64.000000,
+		-64.000000,
+		-64.000000,
+	]
+	m_BoundingBoxMax = 
+	[
+		64.000000,
+		64.000000,
+		64.000000,
+	]
+	m_bShouldSort = false
+	m_nBehaviorVersion = 9
+	m_nFirstMultipleOverride_BackwardCompat = 8
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nMaxEmittedPerFrame = 100
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_nMapType = "PF_MAP_TYPE_DIRECT"
+				m_flLiteralValue = 25.000000
+				m_nControlPoint = 0
+				m_nScalarAttribute = 3
+				m_nVectorAttribute = 6
+				m_nVectorComponent = 0
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 1.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_flMultFactor = 1.000000
+				m_flInput0 = 0.000000
+				m_flInput1 = 1.000000
+				m_flOutput0 = 0.000000
+				m_flOutput1 = 1.000000
+				m_nBiasType = "PF_BIAS_TYPE_STANDARD"
+				m_flBiasParameter = 0.000000
+				m_Curve = 
+				{
+					m_spline = 
+					[
+					]
+					m_tangents = 
+					[
+					]
+					m_vDomainMins = 
+					[
+						0.000000,
+						0.000000,
+					]
+					m_vDomainMaxs = 
+					[
+						0.000000,
+						0.000000,
+					]
+				}
+			}
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+			m_LocalCoordinateSystemSpeedMax = 
+			[
+				162.000000,
+				162.000000,
+				125.000000,
+			]
+			m_LocalCoordinateSystemSpeedMin = 
+			[
+				-162.000000,
+				-162.000000,
+				75.000000,
+			]
+			m_fRadiusMax = 0.125000
+		},
+		
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMax = 1
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 360.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 4
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 8.000000
+				m_flRandomMax = 15.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 2.000000
+				m_flRandomMax = 7.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.250980
+				m_flRandomMax = 0.752941
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 7
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_flTintPerc = 0.350000
+			m_ColorMax = 
+			[
+				36,
+				44,
+				52,
+			]
+			m_ColorMin = 
+			[
+				81,
+				91,
+				99,
+			]
+			m_TintMax = 
+			[
+				178,
+				178,
+				178,
+			]
+		},
+		
+		{
+			_class = "C_INIT_RandomSecondSequence"
+			m_nSequenceMax = 6
+		},
+		
+		{
+			_class = "C_INIT_RandomYawFlip"
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_fDrag = 0.500000
+		},
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_FadeOut"
+			m_flFadeOutTimeMax = 0.500000
+			m_flFadeOutTimeMin = 0.500000
+		},
+		
+		{
+			_class = "C_OP_Spin"
+			m_nSpinRateDegrees = 2
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flBias = 0.960000
+			m_flStartScale = 0.250000
+		},
+	]
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_flStartFadeSize = 0.400000
+			m_flEndFadeSize = 0.550000
+			m_bDisableZBuffering = true
+			m_nAnimationType = "ANIMATION_TYPE_FIT_LIFETIME"
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/smoke/smokeburst/smokeloop_i_0.vtex"
+					m_nTextureChannels = "SPRITECARD_TEXTURE_CHANNEL_MIX_A"
+				},
+				
+				{
+					m_hTexture = resource:"materials/particle/smoke/smokeburst/smokeloop_i_0.vtex"
+					m_TextureControls = 
+					{
+						m_flFinalTextureUVRotation = 
+						{
+							m_nType = "PF_TYPE_LITERAL"
+							m_flLiteralValue = 0.025000
+						}
+					}
+					m_nTextureChannels = "SPRITECARD_TEXTURE_CHANNEL_MIX_RGB"
+				},
+				
+				{
+					m_hTexture = resource:"materials/particle/smoke/smokeburst/smokeloop_i_0_flw.vtex"
+					m_nTextureType = "SPRITECARD_TEXTURE_ANIMMOTIONVEC"
+				},
+			]
+		},
+	]
+}

@@ -1,0 +1,805 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{26a28fb5-3562-4740-95da-eb8cf58ab360} -->
+{
+	_class = "CAnimGraphModelBinding"
+	m_modelName = "models/hostage/v_hostage_arm.vmdl"
+	m_pSharedData = 
+	{
+		_class = "CAnimUpdateSharedData"
+		m_nodes = 
+		[
+			
+			{
+				_class = "CSequenceUpdateNode"
+				m_nodePath = 
+				{
+					m_path = 
+					[
+						
+						{
+							m_id = 635157044
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+					]
+					m_nCount = 1
+				}
+				m_name = "draw"
+				m_networkMode = "ServerAuthoritative"
+				m_paramSpans = 
+				{
+					m_spans = 
+					[
+					]
+				}
+				m_tags = 
+				[
+				]
+				m_hSequence = 1
+				m_playbackSpeed = 1.000000
+				m_duration = 1.000000
+				m_bLoop = false
+			},
+			
+			{
+				_class = "CSingleFrameUpdateNode"
+				m_nodePath = 
+				{
+					m_path = 
+					[
+						
+						{
+							m_id = 1426999543
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+					]
+					m_nCount = 1
+				}
+				m_name = "idle : 0"
+				m_networkMode = "ServerAuthoritative"
+				m_actions = 
+				[
+				]
+				m_hPoseCacheHandle = 
+				{
+					m_nIndex = 0
+					m_eType = "POSETYPE_STATIC"
+				}
+				m_hSequence = 0
+				m_flCycle = 0.000000
+			},
+			
+			{
+				_class = "CStateMachineUpdateNode"
+				m_nodePath = 
+				{
+					m_path = 
+					[
+						
+						{
+							m_id = 57986808
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+					]
+					m_nCount = 1
+				}
+				m_name = "State Machine"
+				m_networkMode = "ServerAuthoritative"
+				m_stateMachine = 
+				{
+					_class = "CAnimStateMachineUpdater"
+					m_states = 
+					[
+						
+						{
+							m_name = "start"
+							m_hScript = 
+							{
+								m_id = 0
+							}
+							m_transitionIndices = 
+							[
+								0,
+							]
+							m_actions = 
+							[
+							]
+							m_stateID = 
+							{
+								m_id = 202255327
+							}
+							m_bIsStartState = 1
+							m_bIsEndState = 0
+							m_bIsPassthrough = 0
+						},
+						
+						{
+							m_name = "idle"
+							m_hScript = 
+							{
+								m_id = 4294967295
+							}
+							m_transitionIndices = 
+							[
+							]
+							m_actions = 
+							[
+							]
+							m_stateID = 
+							{
+								m_id = 1670217514
+							}
+							m_bIsStartState = 0
+							m_bIsEndState = 0
+							m_bIsPassthrough = 0
+						},
+					]
+					m_transitions = 
+					[
+						
+						{
+							m_srcStateIndex = 0
+							m_destStateIndex = 1
+							m_bDisabled = 0
+						},
+					]
+					m_startStateIndex = 0
+				}
+				m_stateData = 
+				[
+					
+					{
+						m_pChild = 
+						{
+							m_nodeIndex = 0
+						}
+						m_bExclusiveRootMotion = 0
+					},
+					
+					{
+						m_pChild = 
+						{
+							m_nodeIndex = 1
+						}
+						m_bExclusiveRootMotion = 0
+					},
+				]
+				m_transitionData = 
+				[
+					
+					{
+						m_curve = 
+						{
+							m_flControlPoint1 = 0.000000
+							m_flControlPoint2 = 1.000000
+						}
+						m_blendDuration = 
+						{
+							m_constValue = 0.200000
+							m_hParam = 
+							{
+								m_type = "ANIMPARAM_UNKNOWN"
+								m_index = 255
+							}
+						}
+						m_resetCycleValue = 
+						{
+							m_constValue = 0.000000
+							m_hParam = 
+							{
+								m_type = "ANIMPARAM_UNKNOWN"
+								m_index = 255
+							}
+						}
+						m_bReset = 1
+						m_resetCycleOption = 0
+					},
+				]
+				m_bBlockWaningTags = false
+				m_bLockStateWhenWaning = false
+			},
+			
+			{
+				_class = "CRootUpdateNode"
+				m_nodePath = 
+				{
+					m_path = 
+					[
+						
+						{
+							m_id = 1317219758
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+					]
+					m_nCount = 1
+				}
+				m_name = "Final Pose"
+				m_networkMode = "ServerAuthoritative"
+				m_pChildNode = 
+				{
+					m_nodeIndex = 2
+				}
+			},
+		]
+		m_nodeIndexMap = 
+		[
+			
+			{
+				key = 
+				{
+					m_path = 
+					[
+						
+						{
+							m_id = 57986808
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+					]
+					m_nCount = 1
+				}
+				value = 2
+			},
+			
+			{
+				key = 
+				{
+					m_path = 
+					[
+						
+						{
+							m_id = 635157044
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+					]
+					m_nCount = 1
+				}
+				value = 0
+			},
+			
+			{
+				key = 
+				{
+					m_path = 
+					[
+						
+						{
+							m_id = 1317219758
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+					]
+					m_nCount = 1
+				}
+				value = 3
+			},
+			
+			{
+				key = 
+				{
+					m_path = 
+					[
+						
+						{
+							m_id = 1426999543
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+					]
+					m_nCount = 1
+				}
+				value = 1
+			},
+		]
+		m_components = 
+		[
+		]
+		m_pParamListUpdater = 
+		{
+			_class = "CAnimParameterManagerUpdater"
+			m_parameters = 
+			[
+			]
+			m_idToIndexMap = 
+			[
+			]
+			m_nameToIndexMap = 
+			{
+			}
+			m_indexToHandle = 
+			[
+			]
+			m_autoResetParams = 
+			[
+			]
+			m_autoResetMap = 
+			[
+			]
+		}
+		m_pTagManagerUpdater = 
+		{
+			_class = "CAnimTagManagerUpdater"
+			m_tags = 
+			[
+			]
+		}
+		m_scriptManager = 
+		{
+			_class = "CAnimScriptManager"
+			m_scriptInfo = 
+			[
+				
+				{
+					m_code = "(GetTimeTillFinished() <= 0) ? 0 : (-1)"
+					m_paramsModified = 
+					[
+					]
+					m_proxyReadParams = 
+					[
+					]
+					m_proxyWriteParams = 
+					[
+					]
+					m_eScriptType = "ANIMSCRIPT_FUSE_STATEMACHINE"
+				},
+			]
+		}
+		m_settings = 
+		{
+			_class = "CAnimGraphSettingsManager"
+			m_settingsGroups = 
+			[
+				
+				{
+					_class = "CAnimGraphNetworkSettings"
+					m_bNetworkingEnabled = true
+				},
+			]
+		}
+		m_pStaticPoseCache = 
+		{
+			_class = "CStaticPoseCacheBuilder"
+			m_poses = 
+			[
+				
+				{
+					_class = "CCachedPose"
+					m_transforms = 
+					[
+						
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+							1.000000,
+							0.000000,
+							0.000000,
+							0.000000,
+							1.000000,
+						],
+					]
+					m_morphWeights = 
+					[
+					]
+					m_hSequence = 0
+					m_flCycle = 0.000000
+				},
+			]
+			m_nBoneCount = 1
+			m_nMorphCount = 0
+		}
+		m_pSkeleton = 
+		{
+			_class = "CAnimSkeleton"
+			m_localSpaceTransforms = 
+			[
+				
+				[
+					0.000000,
+					0.000000,
+					0.000000,
+					1.000000,
+					0.000000,
+					0.000000,
+					0.000000,
+					1.000000,
+				],
+			]
+			m_modelSpaceTransforms = 
+			[
+				
+				[
+					0.000000,
+					0.000000,
+					0.000000,
+					1.000000,
+					0.000000,
+					0.000000,
+					0.000000,
+					1.000000,
+				],
+			]
+			m_boneNames = 
+			[
+				"arm_root",
+			]
+			m_children = 
+			[
+				
+				[
+				],
+			]
+			m_parents = 
+			[
+				-1,
+			]
+			m_feet = 
+			[
+			]
+			m_morphNames = 
+			[
+			]
+			m_lodBoneCounts = 
+			[
+			]
+		}
+		m_rootNodePath = 
+		{
+			m_path = 
+			[
+				
+				{
+					m_id = 1317219758
+				},
+				
+				{
+					m_id = 4294967295
+				},
+				
+				{
+					m_id = 4294967295
+				},
+				
+				{
+					m_id = 4294967295
+				},
+				
+				{
+					m_id = 4294967295
+				},
+				
+				{
+					m_id = 4294967295
+				},
+				
+				{
+					m_id = 4294967295
+				},
+				
+				{
+					m_id = 4294967295
+				},
+				
+				{
+					m_id = 4294967295
+				},
+				
+				{
+					m_id = 4294967295
+				},
+				
+				{
+					m_id = 4294967295
+				},
+			]
+			m_nCount = 1
+		}
+	}
+}

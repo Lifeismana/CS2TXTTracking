@@ -1,0 +1,261 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_BoundingBoxMin = 
+	[
+		-512.000000,
+		-512.000000,
+		-32.000000,
+	]
+	m_BoundingBoxMax = 
+	[
+		512.000000,
+		512.000000,
+		32.000000,
+	]
+	m_nAllowRenderControlPoint = 2
+	m_bShouldSort = false
+	m_flMinimumTimeStep = 0.070000
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_flStartFadeSize = 0.400000
+			m_flEndFadeSize = 0.550000
+			m_flAnimationRate = 1.000000
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/vistasmokev1/vistasmokev1_emods.vtex"
+					m_nTextureChannels = "SPRITECARD_TEXTURE_CHANNEL_MIX_A"
+				},
+				
+				{
+					m_hTexture = resource:"materials/particle/vistasmokev1/vistasmokev1_emods.vtex"
+					m_TextureControls = 
+					{
+						m_flZoomScale = 
+						{
+							m_nType = "PF_TYPE_LITERAL"
+							m_flLiteralValue = 4.000000
+						}
+						m_flFinalTextureUVRotation = 
+						{
+							m_nType = "PF_TYPE_LITERAL"
+							m_flLiteralValue = 0.500000
+						}
+					}
+					m_nTextureChannels = "SPRITECARD_TEXTURE_CHANNEL_MIX_RGB"
+				},
+			]
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_Gravity = 
+			[
+				0.000000,
+				0.000000,
+				-80.000000,
+			]
+			m_fDrag = 0.100000
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flBias = 0.750000
+			m_flEndScale = 1.500000
+			m_flStartScale = 0.000000
+		},
+		
+		{
+			_class = "C_OP_FadeOut"
+			m_bEaseInAndOut = false
+			m_flFadeOutTimeMax = 1.000000
+			m_flFadeOutTimeMin = 1.000000
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.039216
+				m_flRandomMax = 0.078431
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 7
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 6.000000
+				m_flRandomMax = 12.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.100000
+				m_flRandomMax = 0.160000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_flUpdateThreshold = 512.000000
+			m_TintMax = 
+			[
+				180,
+				180,
+				180,
+				null,
+			]
+			m_TintMin = 
+			[
+				63,
+				63,
+				63,
+				null,
+			]
+			m_nTintCP = 2
+			m_ColorMin = 
+			[
+				152,
+				152,
+				152,
+				null,
+			]
+			m_ColorMax = 
+			[
+				68,
+				77,
+				82,
+				null,
+			]
+			m_flTintPerc = 0.750000
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 360.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 4
+		},
+		
+		{
+			_class = "C_INIT_CreateFromPlaneCache"
+			m_vecOffsetMax = 
+			[
+				32.000000,
+				32.000000,
+				4.000000,
+			]
+			m_vecOffsetMin = 
+			[
+				-32.000000,
+				-32.000000,
+				4.000000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_RandomSequence"
+		},
+		
+		{
+			_class = "C_INIT_InitialVelocityNoise"
+			m_vecOutputMax = 
+			[
+				48.000000,
+				48.000000,
+				40.000000,
+			]
+			m_vecOutputMin = 
+			[
+				-48.000000,
+				-48.000000,
+				12.000000,
+			]
+			m_TransformInput = 
+			{
+				m_nType = "PT_TYPE_INVALID"
+			}
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_flInput0 = 0.000000
+				m_flInput1 = 4.000000
+				m_flOutput0 = 1.000000
+				m_flOutput1 = 16.000000
+				m_nMapType = "PF_MAP_TYPE_REMAP"
+				m_nType = "PF_TYPE_CONTROL_POINT_COMPONENT"
+				m_nControlPoint = 3
+				m_nVectorComponent = 0
+			}
+			m_nOutputField = 7
+			m_nSetMethod = "PARTICLE_SET_SCALE_INITIAL_VALUE"
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_flInput0 = 1.000000
+				m_flInput1 = 4.000000
+				m_flOutput0 = 1.000000
+				m_flOutput1 = 3.000000
+				m_nMapType = "PF_MAP_TYPE_REMAP"
+				m_nType = "PF_TYPE_CONTROL_POINT_COMPONENT"
+				m_nControlPoint = 3
+				m_nVectorComponent = 0
+			}
+			m_nSetMethod = "PARTICLE_SET_SCALE_INITIAL_VALUE"
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_ContinuousEmitter"
+			m_flEmitRate = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 700.000000
+			}
+		},
+	]
+	m_nBehaviorVersion = 5
+	m_nFirstMultipleOverride_BackwardCompat = 7
+}

@@ -1,0 +1,233 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 30
+	m_flConstantRadius = 128.000000
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_flStartFadeSize = 0.700000
+			m_flEndFadeSize = 0.980000
+			m_flAnimationRate = 0.600000
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/vistasmokev1/vistasmokev1_emods.vtex"
+					m_nTextureChannels = "SPRITECARD_TEXTURE_CHANNEL_MIX_A"
+				},
+				
+				{
+					m_hTexture = resource:"materials/particle/vistasmokev1/vistasmokev1_emods.vtex"
+					m_TextureControls = 
+					{
+						m_flZoomScale = 
+						{
+							m_nType = "PF_TYPE_LITERAL"
+							m_flLiteralValue = 4.000000
+						}
+						m_flFinalTextureUVRotation = 
+						{
+							m_nType = "PF_TYPE_LITERAL"
+							m_flLiteralValue = 0.045000
+						}
+					}
+					m_nTextureChannels = "SPRITECARD_TEXTURE_CHANNEL_MIX_RGB"
+				},
+			]
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_Gravity = 
+			[
+				0.000000,
+				0.000000,
+				-10.000000,
+			]
+			m_fDrag = 0.005000
+		},
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_FadeIn"
+			m_bProportional = false
+			m_flFadeInTimeMax = 3.000000
+			m_flFadeInTimeMin = 3.000000
+		},
+		
+		{
+			_class = "C_OP_FadeOut"
+			m_bEaseInAndOut = false
+			m_bProportional = false
+			m_flFadeOutTimeMin = 4.000000
+			m_flFadeOutTimeMax = 4.000000
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flStartScale = 0.500000
+			m_flEndScale = 5.000000
+		},
+		
+		{
+			_class = "C_OP_DampenToCP"
+			m_flScale = 0.500000
+			m_flRange = 40.000000
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMax = 1
+			m_nSequenceMin = 1
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 4.000000
+				m_flRandomMax = 5.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 40.000000
+				m_flRandomMax = 55.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.705882
+				m_flRandomMax = 0.784314
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 7
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 60.000000
+			}
+			m_nOutputField = 4
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = -25.000000
+				m_flRandomMax = 25.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 5
+		},
+		
+		{
+			_class = "C_INIT_RandomSecondSequence"
+		},
+		
+		{
+			_class = "C_INIT_CreateWithinBox"
+			m_vecMax = 
+			[
+				40.000000,
+				40.000000,
+				100.000000,
+			]
+			m_vecMin = 
+			[
+				-40.000000,
+				-40.000000,
+				20.000000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_TintMax = 
+			[
+				166,
+				158,
+				150,
+				null,
+			]
+			m_TintMin = 
+			[
+				43,
+				39,
+				37,
+				null,
+			]
+			m_ColorMin = 
+			[
+				103,
+				98,
+				92,
+				null,
+			]
+			m_ColorMax = 
+			[
+				68,
+				62,
+				60,
+				null,
+			]
+			m_flTintPerc = 0.500000
+			m_nTintBlendMode = "4"
+		},
+		
+		{
+			_class = "C_INIT_RandomYawFlip"
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nMaxEmittedPerFrame = 50
+			m_flStartTime = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.700000
+			}
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 4.000000
+			}
+		},
+	]
+	m_nBehaviorVersion = 5
+	m_nFirstMultipleOverride_BackwardCompat = 9
+}

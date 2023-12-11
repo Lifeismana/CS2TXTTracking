@@ -1,0 +1,153 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 50
+	m_nInitialParticles = 1
+	m_BoundingBoxMax = 
+	[
+		10.000000,
+		10.000000,
+		1000.000000,
+	]
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderModels"
+			m_nAnimationScaleField = 3
+			m_bOrientZ = true
+			m_ModelList = 
+			[
+				
+				{
+					m_model = resource:"models/props/de_overpass/balloon.vmdl"
+				},
+			]
+			m_bAnimated = true
+			m_bForceDrawInterlevedWithSiblings = true
+			m_bForceLoopingAnimation = true
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_FadeAndKill"
+			m_flEndFadeInTime = 0.250000
+			m_flStartAlpha = 0.000000
+		},
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_fDrag = 0.025000
+			m_Gravity = 
+			[
+				0.000000,
+				0.000000,
+				45.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flStartScale = 0.500000
+			m_flBias = 0.900000
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.370000
+				m_flRandomMax = 0.400000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 5.000000
+				m_flRandomMax = 6.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMin = 
+			[
+				0,
+				6,
+				255,
+				null,
+			]
+			m_ColorMax = 
+			[
+				60,
+				255,
+				0,
+				null,
+			]
+		},
+		
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+			m_LocalCoordinateSystemSpeedMax = 
+			[
+				8.000000,
+				8.000000,
+				10.000000,
+			]
+			m_LocalCoordinateSystemSpeedMin = 
+			[
+				-8.000000,
+				-8.000000,
+				5.000000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_PositionOffset"
+			m_OffsetMax = 
+			[
+				0.000000,
+				0.000000,
+				-32.000000,
+			]
+			m_OffsetMin = 
+			[
+				0.000000,
+				0.000000,
+				-32.000000,
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_ContinuousEmitter"
+			m_flEmissionDuration = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 2.500000
+			}
+			m_flEmitRate = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 3.000000
+			}
+		},
+	]
+	m_nBehaviorVersion = 5
+	m_nFirstMultipleOverride_BackwardCompat = 4
+}

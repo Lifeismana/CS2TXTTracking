@@ -1,0 +1,137 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 4
+	m_flConstantRadius = 256.000000
+	m_bScreenSpaceEffect = true
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			VisibilityInputs = 
+			{
+				m_flInputMax = 0.100000
+				m_flProxyRadius = 32.000000
+				m_nCPin = 1
+			}
+			m_flStartFadeSize = 7.000000
+			m_flEndFadeSize = 8.000000
+			m_bDisableZBuffering = true
+			m_flOverbrightFactor = 10.000000
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/particle_flares/particle_flare_004b_mod.vtex"
+				},
+			]
+			m_nOutputBlendMode = "PARTICLE_OUTPUT_BLEND_MODE_MOD2X"
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+		},
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_FadeOut"
+			m_flFadeBias = 0.900000
+			m_bEaseInAndOut = false
+			m_flFadeOutTimeMax = 0.500000
+			m_flFadeOutTimeMin = 0.400000
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flEndScale = 1.500000
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.150000
+				m_flRandomMax = 0.200000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 256.000000
+			}
+		},
+		
+		{
+			_class = "C_INIT_CreateWithinBox"
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMin = 
+			[
+				255,
+				233,
+				112,
+				null,
+			]
+			m_ColorMax = 
+			[
+				255,
+				226,
+				180,
+				null,
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nMaxEmittedPerFrame = 100
+			m_flStartTime = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.050000
+			}
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 4.000000
+			}
+		},
+	]
+	m_Constraints = 
+	[
+		
+		{
+			_class = "C_OP_ConstrainDistance"
+			m_bGlobalCenter = true
+			m_CenterOffset = 
+			[
+				0.000000,
+				0.000000,
+				64.000000,
+			]
+			m_fMaxDistance = 2.000000
+		},
+	]
+	m_nBehaviorVersion = 5
+}

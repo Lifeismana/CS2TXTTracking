@@ -1,0 +1,374 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_nBehaviorVersion = 12
+	m_ConstantColor = 
+	[
+		251,
+		190,
+		70,
+		255,
+	]
+	m_nMaxParticles = 4
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						-70.734802,
+						140.187668,
+						10.206337,
+					]
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_PreEmissionOperators = 
+	[
+		
+		{
+			_class = "C_OP_SetControlPointToHMD"
+			m_nCP1 = 8
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_nMapType = "PF_MAP_TYPE_DIRECT"
+				m_flLiteralValue = 1.000000
+				m_nControlPoint = 0
+				m_nScalarAttribute = 3
+				m_nVectorAttribute = 6
+				m_nVectorComponent = 0
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 2.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_flMultFactor = 1.000000
+				m_flInput0 = 0.000000
+				m_flInput1 = 1.000000
+				m_flOutput0 = 0.000000
+				m_flOutput1 = 1.000000
+				m_nBiasType = "PF_BIAS_TYPE_STANDARD"
+				m_flBiasParameter = 0.000000
+				m_Curve = 
+				{
+					m_spline = 
+					[
+					]
+					m_tangents = 
+					[
+					]
+					m_vDomainMins = 
+					[
+						0.000000,
+						0.000000,
+					]
+					m_vDomainMaxs = 
+					[
+						0.000000,
+						0.000000,
+					]
+				}
+			}
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 360.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 4
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 20.000000
+			}
+		},
+		
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+			m_fRadiusMax = 2.000000
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.350000
+				m_flRandomMax = 0.425000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_NormalOffset"
+			m_OffsetMin = 
+			[
+				-5.000000,
+				-5.000000,
+				-5.000000,
+			]
+			m_OffsetMax = 
+			[
+				5.000000,
+				5.000000,
+				5.000000,
+			]
+			m_bNormalize = true
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.176471
+				m_flRandomMax = 0.254902
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 16
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_fDrag = 0.300000
+		},
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flEndScale = 14.000000
+			m_flBias = 0.750000
+			m_flStartScale = 0.000000
+		},
+		
+		{
+			_class = "C_OP_FadeOutSimple"
+			m_flFadeOutTime = 0.750000
+		},
+		
+		{
+			_class = "C_OP_ColorInterpolate"
+			m_ColorFade = 
+			[
+				114,
+				48,
+				4,
+			]
+			m_flFadeStartTime = 0.100000
+			m_flFadeEndTime = 0.400000
+		},
+		
+		{
+			_class = "C_OP_FadeOutSimple"
+			m_nFieldOutput = 16
+			m_flFadeOutTime = 1.000000
+		},
+		
+		{
+			_class = "C_OP_SetFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_PARTICLE_AGE_NORMALIZED"
+				m_nMapType = "PF_MAP_TYPE_CURVE"
+				m_flLiteralValue = 0.000000
+				m_nControlPoint = 0
+				m_nScalarAttribute = 3
+				m_nVectorAttribute = 6
+				m_nVectorComponent = 0
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 1.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_flMultFactor = 1.000000
+				m_flInput0 = 0.000000
+				m_flInput1 = 1.000000
+				m_flOutput0 = 0.000000
+				m_flOutput1 = 1.000000
+				m_nBiasType = "PF_BIAS_TYPE_STANDARD"
+				m_flBiasParameter = 0.000000
+				m_Curve = 
+				{
+					m_spline = 
+					[
+						
+						{
+							x = 0.001372
+							y = 0.000000
+							m_flSlopeIncoming = 1.193110
+							m_flSlopeOutgoing = 1.193110
+						},
+						
+						{
+							x = 0.194864
+							y = 0.230857
+							m_flSlopeIncoming = 2.262165
+							m_flSlopeOutgoing = 2.262165
+						},
+						
+						{
+							x = 0.303274
+							y = 0.682952
+							m_flSlopeIncoming = 0.044647
+							m_flSlopeOutgoing = 0.044647
+						},
+						
+						{
+							x = 0.625761
+							y = 0.250095
+							m_flSlopeIncoming = -0.979950
+							m_flSlopeOutgoing = -0.979950
+						},
+						
+						{
+							x = 1.000200
+							y = 0.000000
+							m_flSlopeIncoming = -0.667920
+							m_flSlopeOutgoing = -0.667920
+						},
+					]
+					m_tangents = 
+					[
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_SPLINE"
+							m_nOutgoingTangent = "CURVE_TANGENT_SPLINE"
+						},
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_SPLINE"
+							m_nOutgoingTangent = "CURVE_TANGENT_SPLINE"
+						},
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_SPLINE"
+							m_nOutgoingTangent = "CURVE_TANGENT_SPLINE"
+						},
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_SPLINE"
+							m_nOutgoingTangent = "CURVE_TANGENT_SPLINE"
+						},
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_SPLINE"
+							m_nOutgoingTangent = "CURVE_TANGENT_SPLINE"
+						},
+					]
+					m_vDomainMins = 
+					[
+						0.000000,
+						0.000000,
+					]
+					m_vDomainMaxs = 
+					[
+						1.000000,
+						1.000000,
+					]
+				}
+			}
+			m_nOutputField = 16
+			m_nSetMethod = "PARTICLE_SET_SCALE_INITIAL_VALUE"
+		},
+		
+		{
+			_class = "C_OP_FadeInSimple"
+		},
+	]
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderModels"
+			m_ModelList = 
+			[
+				
+				{
+					m_model = resource:"models/particle/sin_sphere.vmdl"
+				},
+			]
+			m_nSubModelField = 19
+			m_nManualFrameField = 19
+			m_hOverrideMaterial = resource:"materials/models/particle/sphere_fire3.vmat"
+			m_flAnimationRate = 140.000000
+			m_bAnimated = true
+			m_bDisableShadows = true
+			m_MaterialVars = 
+			[
+				
+				{
+					m_strVariable = "$EMISSIVESCALE"
+					m_nVariableField = 7
+					m_flScale = 3.000000
+				},
+				
+				{
+					m_strVariable = "$OPACITY"
+					m_nVariableField = 16
+				},
+				
+				{
+					m_strVariable = "$NOISE"
+					m_nVariableField = 7
+					m_flScale = 0.100000
+				},
+				
+				{
+					m_strVariable = "$EMISSIVEBRIGHTNESS"
+					m_nVariableField = 16
+					m_flScale = 2.000000
+				},
+				
+				{
+					m_strVariable = "$COLOR"
+					m_nVariableField = 6
+				},
+				
+				{
+					m_strVariable = "$SELFILLUM"
+					m_nVariableField = 7
+				},
+			]
+			VisibilityInputs = 
+			{
+				m_flInputMax = 0.100000
+				m_flProxyRadius = 4.000000
+				m_nCPin = 0
+			}
+			m_bOnlyRenderInEffectsBloomPass = true
+			m_nColorBlendType = "PARTICLE_COLOR_BLEND_REPLACE"
+		},
+	]
+}

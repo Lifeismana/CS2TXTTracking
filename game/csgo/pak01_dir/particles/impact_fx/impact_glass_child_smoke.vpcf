@@ -1,0 +1,230 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 4
+	m_BoundingBoxMin = 
+	[
+		-64.000000,
+		-64.000000,
+		-64.000000,
+	]
+	m_BoundingBoxMax = 
+	[
+		64.000000,
+		64.000000,
+		64.000000,
+	]
+	m_bShouldSort = false
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_flStartFadeSize = 0.400000
+			m_flEndFadeSize = 0.550000
+			m_nOrientationType = "PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL"
+			m_bMaxLuminanceBlendingSequence0 = true
+			m_flDiffuseAmount = 0.000000
+			m_flSelfIllumAmount = 1.000000
+			m_flFeatheringMaxDist = 10.000000
+			m_nFeatheringMode = "PARTICLE_DEPTH_FEATHERING_ON_OPTIONAL"
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/vistasmokev1/vistasmokev1_gray.vtex"
+					m_nTextureChannels = "SPRITECARD_TEXTURE_CHANNEL_MIX_A"
+				},
+				
+				{
+					m_hTexture = resource:"materials/particle/vistasmokev1/vistasmokev1_gray.vtex"
+					m_TextureControls = 
+					{
+						m_flFinalTextureUVRotation = 
+						{
+							m_nType = "PF_TYPE_LITERAL"
+							m_flLiteralValue = 0.075000
+						}
+					}
+					m_nTextureChannels = "SPRITECARD_TEXTURE_CHANNEL_MIX_RGB"
+				},
+			]
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_fDrag = 0.170000
+		},
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_FadeOut"
+			m_flFadeOutTimeMax = 0.500000
+			m_flFadeOutTimeMin = 0.500000
+		},
+		
+		{
+			_class = "C_OP_Spin"
+			m_nSpinRateDegrees = 2
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flBias = 0.900000
+			m_flEndScale = 2.000000
+			m_flStartScale = 0.700000
+		},
+		
+		{
+			_class = "C_OP_CalculateVectorAttribute"
+			m_nControlPointInput1 = 
+			{
+				m_controlPointNameString = 3
+			}
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+			m_LocalCoordinateSystemSpeedMax = 
+			[
+				65.000000,
+				65.000000,
+				125.000000,
+			]
+			m_LocalCoordinateSystemSpeedMin = 
+			[
+				-65.000000,
+				-65.000000,
+				50.000000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMax = 3
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 360.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 4
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 5.000000
+				m_flRandomMax = 10.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 2.000000
+				m_flRandomMax = 4.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.062745
+				m_flRandomMax = 0.141176
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 7
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_flTintPerc = 0.350000
+			m_ColorMax = 
+			[
+				75,
+				76,
+				77,
+				255,
+			]
+			m_ColorMin = 
+			[
+				89,
+				94,
+				97,
+				255,
+			]
+			m_TintMax = 
+			[
+				158,
+				158,
+				158,
+				255,
+			]
+		},
+		
+		{
+			_class = "C_INIT_RandomSecondSequence"
+			m_nSequenceMin = 5
+			m_nSequenceMax = 8
+		},
+		
+		{
+			_class = "C_INIT_RandomYawFlip"
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nMaxEmittedPerFrame = 100
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 2.000000
+			}
+		},
+	]
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_nBehaviorVersion = 5
+	m_nFirstMultipleOverride_BackwardCompat = 8
+}

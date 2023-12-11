@@ -1,0 +1,254 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{9bada39c-a931-42d0-abdd-e5c1b13d37a6} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 80
+	m_BoundingBoxMin = 
+	[
+		-64.000000,
+		-64.000000,
+		-64.000000,
+	]
+	m_BoundingBoxMax = 
+	[
+		64.000000,
+		64.000000,
+		64.000000,
+	]
+	m_flCullRadius = 80.000000
+	m_hFallback = resource:"particles/impact_fx/impact_wood_cheap.vpcf"
+	m_nFallbackMaxCount = 2
+	m_flMaxDrawDistance = 1200.000000
+	m_bShouldSort = false
+	m_flAggregateRadius = 512.000000
+	m_nAggregationMinAvailableParticles = 1
+	m_nBehaviorVersion = 12
+	m_nFirstMultipleOverride_BackwardCompat = 7
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nMaxEmittedPerFrame = 2
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 10.000000
+			}
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+			m_LocalCoordinateSystemSpeedMax = 
+			[
+				150.000000,
+				150.000000,
+				250.000000,
+			]
+			m_LocalCoordinateSystemSpeedMin = 
+			[
+				-150.000000,
+				-150.000000,
+				0.000000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMax = 2
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 360.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 4
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.500000
+				m_flRandomMax = 3.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.500000
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_flTintPerc = 0.400000
+			m_ColorMax = 
+			[
+				69,
+				69,
+				69,
+				255,
+			]
+			m_ColorMin = 
+			[
+				167,
+				167,
+				167,
+				255,
+			]
+			m_TintMax = 
+			[
+				142,
+				142,
+				142,
+				255,
+			]
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 360.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 12
+		},
+		
+		{
+			_class = "C_INIT_RandomYawFlip"
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_Gravity = 
+			[
+				0.000000,
+				0.000000,
+				-500.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_FadeOut"
+		},
+		
+		{
+			_class = "C_OP_OscillateVector"
+			m_RateMax = 
+			[
+				0.500000,
+				0.500000,
+				0.500000,
+			]
+			m_FrequencyMin = 
+			[
+				0.000000,
+				0.000000,
+				0.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_OscillateScalar"
+			m_nField = 4
+			m_RateMin = -55.000000
+			m_RateMax = 55.000000
+			m_FrequencyMin = 0.250000
+			m_FrequencyMax = 0.250000
+			m_flEndTime_min = 0.400000
+			m_flEndTime_max = 0.500000
+			m_flOscAdd = 0.750000
+		},
+		
+		{
+			_class = "C_OP_OscillateScalar"
+			m_nField = 12
+			m_RateMin = -25.000000
+			m_RateMax = 25.000000
+			m_FrequencyMin = 0.250000
+			m_FrequencyMax = 0.250000
+			m_flEndTime_min = 0.500000
+			m_flEndTime_max = 0.500000
+			m_flOscAdd = 0.750000
+		},
+		
+		{
+			_class = "C_OP_VelocityDecay"
+			m_flMinVelocity = 0.100000
+		},
+	]
+	m_Constraints = 
+	[
+		
+		{
+			_class = "C_OP_WorldTraceConstraint"
+			m_flOpStartFadeOutTime = 2.000000
+			m_flOpEndFadeOutTime = 2.000000
+			m_flSlideAmount = 0.500000
+			m_flRadiusScale = 0.100000
+			m_bBrushOnly = true
+			m_CollisionGroupName = "DEBRIS"
+			m_flCpMovementTolerance = 512.000000
+			m_flTraceTolerance = 32.000000
+			m_nCollisionMode = "COLLISION_MODE_USE_NEAREST_TRACE"
+		},
+	]
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderModels"
+			m_ModelList = 
+			[
+				
+				{
+					m_model = resource:"models/particle/impacts/wood/impact_wood_chunks.vmdl"
+				},
+			]
+			m_modelInput = 
+			{
+			}
+		},
+	]
+}

@@ -1,0 +1,144 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 10
+	m_flConstantRadius = 20.000000
+	m_bShouldSort = false
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_flStartFadeSize = 7.000000
+			m_flEndFadeSize = 8.000000
+			m_bDisableZBuffering = true
+			m_flOverbrightFactor = 10.000000
+			m_flDiffuseAmount = 0.000000
+			m_flSelfIllumAmount = 1.000000
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/particle_flares/particle_flare_004b_mod.vtex"
+				},
+			]
+			m_nOutputBlendMode = "PARTICLE_OUTPUT_BLEND_MODE_MOD2X"
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flBias = 0.300000
+		},
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_FadeIn"
+			m_bProportional = false
+			m_flFadeInTimeMax = 0.300000
+			m_flFadeInTimeMin = 0.200000
+		},
+		
+		{
+			_class = "C_OP_FadeOut"
+			m_bEaseInAndOut = false
+			m_bProportional = false
+			m_flFadeOutTimeMin = 1.000000
+			m_flFadeOutTimeMax = 1.250000
+		},
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_Gravity = 
+			[
+				0.000000,
+				0.000000,
+				5.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_OscillateScalar"
+			m_flOscMult = 1.000000
+			m_FrequencyMax = 7.000000
+			m_FrequencyMin = 3.000000
+			m_RateMax = 3.000000
+			m_RateMin = 2.000000
+			m_bProportional = false
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 1.000000
+				m_flRandomMax = 1.250000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.196078
+				m_flRandomMax = 0.235294
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 7
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMax = 
+			[
+				227,
+				172,
+				68,
+				null,
+			]
+			m_ColorMin = 
+			[
+				247,
+				239,
+				195,
+				null,
+			]
+		},
+		
+		{
+			_class = "C_INIT_CreateWithinBox"
+			m_vecMax = 
+			[
+				0.000000,
+				0.000000,
+				5.000000,
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_ContinuousEmitter"
+			m_flEmitRate = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 4.000000
+			}
+		},
+	]
+	m_nBehaviorVersion = 5
+}

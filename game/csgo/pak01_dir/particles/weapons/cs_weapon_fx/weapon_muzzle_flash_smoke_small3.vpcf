@@ -1,0 +1,224 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 4
+	m_flConstantRadius = 10.000000
+	m_nBehaviorVersion = 12
+	m_nFirstMultipleOverride_BackwardCompat = 7
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nMaxEmittedPerFrame = 100
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 4.000000
+			}
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+			m_LocalCoordinateSystemSpeedMax = 
+			[
+				120.000000,
+				0.000000,
+				0.000000,
+			]
+			m_LocalCoordinateSystemSpeedMin = 
+			[
+				100.000000,
+				0.000000,
+				0.000000,
+			]
+			m_bLocalCoords = true
+			m_vecDistanceBias = 
+			[
+				4.000000,
+				1.000000,
+				1.000000,
+			]
+			m_fRadiusMax = 0.500000
+		},
+		
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMax = 15
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 360.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 4
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.200000
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_CreationNoise"
+			m_flOutputMax = 4.000000
+			m_flOutputMin = 2.000000
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.235294
+			}
+			m_nOutputField = 7
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_TintMax = 
+			[
+				169,
+				168,
+				166,
+				null,
+			]
+			m_ColorMin = 
+			[
+				169,
+				168,
+				166,
+				null,
+			]
+			m_ColorMax = 
+			[
+				99,
+				97,
+				96,
+				null,
+			]
+			m_flTintPerc = 0.500000
+			m_TintMin = 
+			[
+				99,
+				97,
+				96,
+				null,
+			]
+			m_nTintBlendMode = "4"
+		},
+		
+		{
+			_class = "C_INIT_PositionWarp"
+			m_vecWarpMax = 
+			[
+				2.000000,
+				0.500000,
+				0.500000,
+			]
+			m_vecWarpMin = 
+			[
+				1.000000,
+				0.500000,
+				0.500000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_PositionOffset"
+			m_bLocalCoords = true
+			m_OffsetMax = 
+			[
+				1.000000,
+				0.000000,
+				0.000000,
+			]
+			m_OffsetMin = 
+			[
+				1.000000,
+				0.000000,
+				0.000000,
+			]
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_fDrag = 0.050000
+			m_Gravity = 
+			[
+				0.000000,
+				0.000000,
+				40.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flBias = 0.400000
+			m_flEndScale = 3.000000
+		},
+		
+		{
+			_class = "C_OP_FadeOut"
+			m_bEaseInAndOut = false
+			m_bProportional = false
+			m_flFadeOutTimeMax = 0.180000
+			m_flFadeOutTimeMin = 0.180000
+		},
+	]
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_flStartFadeSize = 0.900000
+			m_flEndFadeSize = 1.300000
+			m_flAnimationRate = 8.000000
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/smoke1/smoke1.vtex"
+				},
+			]
+		},
+	]
+}

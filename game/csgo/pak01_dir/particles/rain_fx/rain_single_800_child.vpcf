@@ -1,0 +1,278 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 3500
+	m_BoundingBoxMin = 
+	[
+		-8.000000,
+		-8.000000,
+		-8.000000,
+	]
+	m_BoundingBoxMax = 
+	[
+		8.000000,
+		8.000000,
+		8.000000,
+	]
+	m_bShouldSort = false
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderTrails"
+			m_bRefract = true
+			m_flRefractAmount = -0.200000
+			m_bGammaCorrectVertexColors = false
+			m_flMinLength = 7.000000
+			m_flMaxLength = 16.000000
+			m_flRadiusScale = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.500000
+			}
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/warp_rain2_normal.vtex"
+					m_TextureControls = 
+					{
+						m_flFinalTextureScaleV = 
+						{
+							m_nType = "PF_TYPE_LITERAL"
+							m_flLiteralValue = -1.000000
+						}
+						m_flFinalTextureOffsetV = 
+						{
+							m_nType = "PF_TYPE_LITERAL"
+							m_flLiteralValue = 1.000000
+						}
+					}
+				},
+			]
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_BasicMovement"
+		},
+		
+		{
+			_class = "C_OP_FadeOut"
+			m_flFadeOutTimeMin = 0.100000
+			m_flFadeOutTimeMax = 0.100000
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flEndScale = 0.250000
+			m_flBias = 0.450000
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.392157
+				m_flRandomMax = 0.588235
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 7
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 1.500000
+				m_flRandomMax = 2.500000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.500000
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+			m_fRadiusMax = 390.000000
+			m_vecDistanceBias = 
+			[
+				1.000000,
+				1.000000,
+				0.000000,
+			]
+			m_LocalCoordinateSystemSpeedMin = 
+			[
+				0.000000,
+				0.000000,
+				-800.000000,
+			]
+			m_LocalCoordinateSystemSpeedMax = 
+			[
+				0.000000,
+				0.000000,
+				-800.000000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.300000
+				m_flRandomMax = 0.500000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 10
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMin = 
+			[
+				224,
+				239,
+				250,
+				null,
+			]
+			m_ColorMax = 
+			[
+				197,
+				191,
+				191,
+				null,
+			]
+			m_flTintPerc = 0.200000
+			m_nTintCP = 1
+			m_TintMin = 
+			[
+				167,
+				158,
+				158,
+				0,
+			]
+			m_TintMax = 
+			[
+				220,
+				214,
+				214,
+				null,
+			]
+			m_flUpdateThreshold = 256.000000
+		},
+		
+		{
+			_class = "C_INIT_InitialVelocityNoise"
+			m_flNoiseScale = 0.065000
+			m_flNoiseScaleLoc = 0.000000
+			m_vecAbsVal = 
+			[
+				1.000000,
+				1.000000,
+				0.000000,
+			]
+			m_vecAbsValInv = 
+			[
+				1.000000,
+				1.000000,
+				0.000000,
+			]
+			m_vecOutputMin = 
+			[
+				18.000000,
+				18.000000,
+				0.000000,
+			]
+			m_vecOutputMax = 
+			[
+				180.000000,
+				180.000000,
+				0.000000,
+			]
+			m_TransformInput = 
+			{
+				m_nType = "PT_TYPE_INVALID"
+			}
+		},
+		
+		{
+			_class = "C_INIT_RtEnvCull"
+			m_bCullOnMiss = true
+		},
+		
+		{
+			_class = "C_INIT_RtEnvCull"
+			m_vecTestNormal = 
+			[
+				0.000000,
+				0.000000,
+				-1.000000,
+			]
+			m_RtEnvName = "PRECIPITATIONBLOCKER"
+		},
+		
+		{
+			_class = "C_INIT_LifespanFromVelocity"
+			m_CollisionGroupName = "DEBRIS"
+			m_flMaxTraceLength = 1400.000000
+			m_nMaxPlanes = 64
+		},
+		
+		{
+			_class = "C_INIT_RtEnvCull"
+			m_bLifeAdjust = true
+			m_bUseVelocity = true
+			m_RtEnvName = "PRECIPITATIONBLOCKER"
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_ContinuousEmitter"
+			m_flEmitRate = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 2000.000000
+			}
+		},
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/rain_fx/rain_storm_leaves.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/rain_fx/rain_single_impact_04.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/rain_fx/rain_single_impact_04b.vpcf"
+		},
+	]
+	m_nBehaviorVersion = 5
+	m_nFirstMultipleOverride_BackwardCompat = 6
+}

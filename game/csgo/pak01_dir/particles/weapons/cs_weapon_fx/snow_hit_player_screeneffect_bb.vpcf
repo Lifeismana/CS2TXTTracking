@@ -1,0 +1,176 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 64
+	m_BoundingBoxMin = 
+	[
+		-64.000000,
+		-64.000000,
+		-64.000000,
+	]
+	m_BoundingBoxMax = 
+	[
+		64.000000,
+		64.000000,
+		200.000000,
+	]
+	m_flMaxDrawDistance = 220.000000
+	m_bScreenSpaceEffect = true
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_bRefract = true
+			m_flRefractAmount = -0.600000
+			m_bGammaCorrectVertexColors = false
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/water/water_beam_01_normal.vtex"
+				},
+			]
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_Gravity = 
+			[
+				0.000000,
+				-22.000000,
+				0.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_FadeOut"
+			m_flFadeBias = 0.650000
+			m_flFadeOutTimeMax = 0.750000
+			m_flFadeOutTimeMin = 0.750000
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flEndTime = 0.025000
+			m_flStartScale = 0.200000
+			m_flEndScale = 1.500000
+			m_flBias = 0.950000
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 5.000000
+				m_flRandomMax = 6.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.517647
+				m_flRandomMax = 0.705882
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 7
+		},
+		
+		{
+			_class = "C_INIT_CreateWithinBox"
+			m_vecMax = 
+			[
+				120.000000,
+				120.000000,
+				-50.000000,
+			]
+			m_vecMin = 
+			[
+				-120.000000,
+				-45.000000,
+				-90.000000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 24.000000
+				m_flRandomMax = 64.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = -2.000000
+				m_flRandomMax = 2.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 4
+		},
+		
+		{
+			_class = "C_INIT_RandomYawFlip"
+		},
+		
+		{
+			_class = "C_INIT_InitialVelocityNoise"
+			m_flNoiseScale = 0.000000
+			m_flNoiseScaleLoc = 5.000000
+			m_vecOutputMin = 
+			[
+				0.000000,
+				-30.000000,
+				0.000000,
+			]
+			m_vecOutputMax = 
+			[
+				0.000000,
+				3.000000,
+				0.000000,
+			]
+			m_TransformInput = 
+			{
+				m_nType = "PT_TYPE_INVALID"
+			}
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 12.000000
+			}
+		},
+	]
+	m_nBehaviorVersion = 5
+	m_nFirstMultipleOverride_BackwardCompat = 5
+}

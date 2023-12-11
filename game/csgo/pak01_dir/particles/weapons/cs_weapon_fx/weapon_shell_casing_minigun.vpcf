@@ -1,0 +1,181 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{4f75132e-4f5d-493c-958e-3bb4328089ba} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 80
+	m_BoundingBoxMin = 
+	[
+		-1.000000,
+		-1.000000,
+		-1.000000,
+	]
+	m_BoundingBoxMax = 
+	[
+		1.000000,
+		1.000000,
+		1.000000,
+	]
+	m_hFallback = resource:"particles/weapons/cs_weapon_fx/weapon_shell_casing_minigun_fallback.vpcf"
+	m_nFallbackMaxCount = 3
+	m_flConstantRadius = 1.500000
+	m_flMaxDrawDistance = 2500.000000
+	m_bShouldSort = false
+	m_nBehaviorVersion = 5
+	m_nFirstMultipleOverride_BackwardCompat = 6
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_ContinuousEmitter"
+			m_flEmitRate = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 72.000000
+			}
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.900000
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+			m_LocalCoordinateSystemSpeedMin = 
+			[
+				40.000000,
+				-15.000000,
+				20.000000,
+			]
+			m_LocalCoordinateSystemSpeedMax = 
+			[
+				90.000000,
+				15.000000,
+				85.000000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 360.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 4
+		},
+		
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMin = 6
+			m_nSequenceMax = 7
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_TintMax = 
+			[
+				202,
+				202,
+				202,
+				null,
+			]
+			m_flTintPerc = 0.750000
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 2.000000
+			}
+		},
+		
+		{
+			_class = "C_INIT_RandomYawFlip"
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_Gravity = 
+			[
+				0.000000,
+				0.000000,
+				-600.000000,
+			]
+			m_fDrag = 0.050000
+		},
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_Spin"
+			m_nSpinRateDegrees = 85
+			m_fSpinRateStopTime = 0.600000
+		},
+		
+		{
+			_class = "C_OP_FadeOut"
+		},
+	]
+	m_Constraints = 
+	[
+		
+		{
+			_class = "C_OP_WorldTraceConstraint"
+			m_flBounceAmount = 0.700000
+			m_flSlideAmount = 0.300000
+			m_CollisionGroupName = "DEBRIS"
+			m_flCpMovementTolerance = 2048.000000
+			m_flTraceTolerance = 64.000000
+			m_nCollisionMode = "COLLISION_MODE_USE_NEAREST_TRACE"
+		},
+	]
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_bBlendFramesSeq0 = false
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/shells/particle_shells.vtex"
+				},
+			]
+		},
+	]
+}

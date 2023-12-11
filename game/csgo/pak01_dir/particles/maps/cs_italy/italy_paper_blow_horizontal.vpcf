@@ -1,0 +1,297 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 24
+	m_flMaximumTimeStep = 0.900000
+	m_flMaximumSimTime = 2.000000
+	m_flMinimumSimTime = 1.000000
+	m_flMaxDrawDistance = 768.000000
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_bBlendFramesSeq0 = false
+			m_flAnimationRate = 1.300000
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/paper/paper.vtex"
+				},
+			]
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_fDrag = 0.033000
+			m_Gravity = 
+			[
+				0.000000,
+				0.000000,
+				-64.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_FadeIn"
+			m_flFadeInTimeMax = 0.100000
+			m_flFadeInTimeMin = 0.100000
+		},
+		
+		{
+			_class = "C_OP_FadeOut"
+			m_flFadeOutTimeMax = 0.100000
+			m_flFadeOutTimeMin = 0.100000
+		},
+		
+		{
+			_class = "C_OP_OscillateScalar"
+			m_FrequencyMax = 2.000000
+			m_FrequencyMin = 0.125000
+			m_RateMax = 8.000000
+			m_RateMin = -8.000000
+			m_nField = 12
+		},
+		
+		{
+			_class = "C_OP_OscillateScalar"
+			m_FrequencyMax = 3.000000
+			m_FrequencyMin = 0.125000
+			m_RateMax = 12.000000
+			m_RateMin = -12.000000
+			m_nField = 4
+		},
+		
+		{
+			_class = "C_OP_ControlpointLight"
+			m_bClampLowerRange = true
+			m_LightZeroDist1 = 1500.000000
+			m_LightFiftyDist1 = 500.000000
+			m_bLightDynamic1 = true
+			m_LightColor1 = 
+			[
+				93,
+				93,
+				93,
+				null,
+			]
+			m_nControlPoint1 = 1
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+			m_LocalCoordinateSystemSpeedMax = 
+			[
+				80.000000,
+				10.000000,
+				80.000000,
+			]
+			m_LocalCoordinateSystemSpeedMin = 
+			[
+				-80.000000,
+				-10.000000,
+				44.000000,
+			]
+			m_fSpeedRandExp = 0.900000
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 6.000000
+				m_flRandomMax = 5.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 2.000000
+				m_flRandomMax = 4.500000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_TintMax = 
+			[
+				141,
+				140,
+				140,
+				null,
+			]
+			m_flTintPerc = 0.750000
+			m_ColorMax = 
+			[
+				160,
+				178,
+				140,
+				null,
+			]
+			m_ColorMin = 
+			[
+				178,
+				140,
+				97,
+				null,
+			]
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 50.000000
+				m_flRandomMax = 360.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 4
+		},
+		
+		{
+			_class = "C_INIT_RandomSequence"
+			m_bShuffle = true
+			m_nSequenceMax = 9
+		},
+		
+		{
+			_class = "C_INIT_PositionOffset"
+			m_OffsetMax = 
+			[
+				128.000000,
+				64.000000,
+				10.000000,
+			]
+			m_OffsetMin = 
+			[
+				-128.000000,
+				-64.000000,
+				2.000000,
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_NoiseEmitter"
+			m_flOutputMax = 1.000000
+		},
+	]
+	m_ForceGenerators = 
+	[
+		
+		{
+			_class = "C_OP_RandomForce"
+			m_MaxForce = 
+			[
+				80.000000,
+				90.000000,
+				208.000000,
+			]
+			m_MinForce = 
+			[
+				-110.000000,
+				-90.000000,
+				164.000000,
+			]
+			m_flOpFadeOscillatePeriod = 10.000000
+			m_flOpEndFadeOutTime = 0.120000
+			m_flOpStartFadeOutTime = 0.100000
+			m_flOpEndFadeInTime = 0.082000
+			m_flOpStartFadeInTime = 0.080000
+		},
+		
+		{
+			_class = "C_OP_RandomForce"
+			m_flOpStartFadeInTime = 0.090000
+			m_flOpEndFadeInTime = 0.100000
+			m_flOpStartFadeOutTime = 0.120000
+			m_flOpEndFadeOutTime = 0.140000
+			m_flOpFadeOscillatePeriod = 10.000000
+			m_MinForce = 
+			[
+				30.000000,
+				-60.000000,
+				0.000000,
+			]
+			m_MaxForce = 
+			[
+				20.000000,
+				60.000000,
+				0.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_RandomForce"
+			m_flOpStartFadeInTime = 0.200000
+			m_flOpEndFadeInTime = 0.220000
+			m_flOpStartFadeOutTime = 0.630000
+			m_flOpEndFadeOutTime = 0.900000
+			m_flOpFadeOscillatePeriod = 10.000000
+			m_MinForce = 
+			[
+				0.000000,
+				160.000000,
+				60.000000,
+			]
+			m_MaxForce = 
+			[
+				0.000000,
+				120.000000,
+				48.000000,
+			]
+		},
+	]
+	m_Constraints = 
+	[
+		
+		{
+			_class = "C_OP_WorldTraceConstraint"
+			m_flBounceAmount = 0.150000
+			m_flSlideAmount = 0.800000
+			m_flRadiusScale = 5.000000
+			m_bBrushOnly = true
+			m_CollisionGroupName = "DEBRIS"
+			m_flTraceTolerance = 8.000000
+			m_nCollisionMode = "COLLISION_MODE_USE_NEAREST_TRACE"
+		},
+	]
+	m_PreEmissionOperators = 
+	[
+		
+		{
+			_class = "C_OP_SetControlPointPositions"
+			m_vecCP1Pos = 
+			[
+				320.000000,
+				16.000000,
+				8.000000,
+			]
+		},
+	]
+	m_nBehaviorVersion = 5
+	m_nFirstMultipleOverride_BackwardCompat = 6
+}

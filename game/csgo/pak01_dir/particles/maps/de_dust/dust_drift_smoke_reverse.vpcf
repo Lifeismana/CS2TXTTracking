@@ -1,0 +1,370 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 30
+	m_BoundingBoxMin = 
+	[
+		-8.000000,
+		-8.000000,
+		-8.000000,
+	]
+	m_BoundingBoxMax = 
+	[
+		8.000000,
+		8.000000,
+		8.000000,
+	]
+	m_bShouldSort = false
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_flStartFadeSize = 0.400000
+			m_flEndFadeSize = 0.650000
+			m_flAnimationRate = 0.500000
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/smoke1/smoke1.vtex"
+				},
+			]
+			m_nOutputBlendMode = "PARTICLE_OUTPUT_BLEND_MODE_ADD"
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_Gravity = 
+			[
+				-150.000000,
+				-20.000000,
+				0.000000,
+			]
+			m_fDrag = 0.050000
+		},
+		
+		{
+			_class = "C_OP_FadeOut"
+			m_flFadeOutTimeMin = 0.500000
+			m_flFadeOutTimeMax = 0.750000
+			m_bEaseInAndOut = false
+			m_flFadeBias = 0.750000
+		},
+		
+		{
+			_class = "C_OP_OscillateVector"
+			m_flStartTime_max = 1.000000
+			m_flStartTime_min = 1.000000
+			m_bProportional = false
+			m_FrequencyMax = 
+			[
+				0.250000,
+				0.250000,
+				0.000000,
+			]
+			m_FrequencyMin = 
+			[
+				0.125000,
+				0.125000,
+				0.000000,
+			]
+			m_RateMax = 
+			[
+				0.125000,
+				0.125000,
+				0.000000,
+			]
+			m_RateMin = 
+			[
+				-0.125000,
+				-0.125000,
+				0.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_OscillateScalar"
+			m_nField = 4
+			m_RateMin = 1.000000
+			m_RateMax = 2.000000
+			m_FrequencyMin = -0.050000
+			m_FrequencyMax = -0.080000
+			m_flOscAdd = 0.750000
+		},
+		
+		{
+			_class = "C_OP_FadeIn"
+			m_flFadeInTimeMin = 0.200000
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flBias = 0.650000
+			m_flEndScale = 3.000000
+			m_flStartScale = 0.250000
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.047059
+				m_flRandomMax = 0.125490
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 7
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 12.000000
+				m_flRandomMax = 24.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 2.000000
+				m_flRandomMax = 4.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+			m_fRadiusMax = 40.000000
+			m_vecDistanceBias = 
+			[
+				1.000000,
+				1.000000,
+				0.000000,
+			]
+			m_LocalCoordinateSystemSpeedMin = 
+			[
+				0.000000,
+				-60.000000,
+				30.000000,
+			]
+			m_LocalCoordinateSystemSpeedMax = 
+			[
+				10.000000,
+				-110.000000,
+				50.000000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMax = 3
+		},
+		
+		{
+			_class = "C_INIT_ColorLitPerParticle"
+			m_TintMax = 
+			[
+				85,
+				85,
+				85,
+				15,
+			]
+			m_ColorMax = 
+			[
+				255,
+				232,
+				176,
+				15,
+			]
+			m_ColorMin = 
+			[
+				255,
+				243,
+				215,
+				15,
+			]
+		},
+		
+		{
+			_class = "C_INIT_InitialVelocityNoise"
+			m_flNoiseScale = 0.015000
+			m_flNoiseScaleLoc = 0.100000
+			m_vecAbsVal = 
+			[
+				1.000000,
+				1.000000,
+				0.000000,
+			]
+			m_vecAbsValInv = 
+			[
+				1.000000,
+				1.000000,
+				0.000000,
+			]
+			m_vecOutputMin = 
+			[
+				-28.000000,
+				-28.000000,
+				0.000000,
+			]
+			m_vecOutputMax = 
+			[
+				64.000000,
+				128.000000,
+				0.000000,
+			]
+			m_TransformInput = 
+			{
+				m_nType = "PT_TYPE_INVALID"
+			}
+		},
+		
+		{
+			_class = "C_INIT_RtEnvCull"
+			m_bCullOnMiss = true
+		},
+		
+		{
+			_class = "C_INIT_PositionOffset"
+			m_bProportional = true
+			m_OffsetMax = 
+			[
+				0.000000,
+				0.000000,
+				0.800000,
+			]
+			m_OffsetMin = 
+			[
+				0.000000,
+				0.000000,
+				0.800000,
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_ContinuousEmitter"
+			m_flOpStartFadeOutTime = 0.100000
+			m_flOpEndFadeOutTime = 0.100000
+			m_flOpFadeOscillatePeriod = 14.000000
+			m_flEmitRate = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 15.000000
+			}
+		},
+		
+		{
+			_class = "C_OP_ContinuousEmitter"
+			m_flOpStartFadeOutTime = 0.100000
+			m_flOpEndFadeOutTime = 0.100000
+			m_flOpFadeOscillatePeriod = 26.000000
+			m_flEmitRate = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 10.000000
+			}
+		},
+		
+		{
+			_class = "C_OP_ContinuousEmitter"
+			m_flOpStartFadeOutTime = 0.050000
+			m_flOpEndFadeOutTime = 0.050000
+			m_flOpFadeOscillatePeriod = 36.000000
+			m_flEmitRate = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 15.000000
+			}
+		},
+	]
+	m_ForceGenerators = 
+	[
+		
+		{
+			_class = "C_OP_RandomForce"
+			m_flOpStartFadeInTime = 0.200000
+			m_flOpEndFadeInTime = 0.220000
+			m_flOpStartFadeOutTime = 0.630000
+			m_flOpEndFadeOutTime = 0.900000
+			m_flOpFadeOscillatePeriod = 10.000000
+			m_MinForce = 
+			[
+				0.000000,
+				-160.000000,
+				0.000000,
+			]
+			m_MaxForce = 
+			[
+				0.000000,
+				-120.000000,
+				0.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_RandomForce"
+			m_flOpStartFadeInTime = 0.090000
+			m_flOpEndFadeInTime = 0.100000
+			m_flOpStartFadeOutTime = 0.120000
+			m_flOpEndFadeOutTime = 0.140000
+			m_flOpFadeOscillatePeriod = 10.000000
+			m_MinForce = 
+			[
+				-30.000000,
+				60.000000,
+				0.000000,
+			]
+			m_MaxForce = 
+			[
+				-20.000000,
+				-60.000000,
+				0.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_RandomForce"
+			m_MaxForce = 
+			[
+				-80.000000,
+				-90.000000,
+				0.000000,
+			]
+			m_MinForce = 
+			[
+				110.000000,
+				90.000000,
+				0.000000,
+			]
+			m_flOpFadeOscillatePeriod = 10.000000
+			m_flOpEndFadeOutTime = 0.120000
+			m_flOpStartFadeOutTime = 0.100000
+			m_flOpEndFadeInTime = 0.082000
+			m_flOpStartFadeInTime = 0.080000
+		},
+	]
+	m_nBehaviorVersion = 5
+	m_nFirstMultipleOverride_BackwardCompat = 6
+}

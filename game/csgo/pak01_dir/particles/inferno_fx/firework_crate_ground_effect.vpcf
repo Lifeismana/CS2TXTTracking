@@ -1,0 +1,44 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_hFallback = resource:"particles/inferno_fx/firework_crate_ground_effect_fallback1.vpcf"
+	m_nFallbackMaxCount = 1
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/inferno_fx/firework_crate_ground_glow_02.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/inferno_fx/firework_crate_ground_smoke_01.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/inferno_fx/firework_crate_ground_embers_01.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/inferno_fx/firework_crate_ground_primary_01.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/inferno_fx/firework_crate_ground_low_04.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/inferno_fx/firework_crate_ground_low_02.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/inferno_fx/firework_crate_ground_low_03.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/inferno_fx/firework_crate_ground_glow_01.vpcf"
+		},
+	]
+	m_nBehaviorVersion = 12
+}

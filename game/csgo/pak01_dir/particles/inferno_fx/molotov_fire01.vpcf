@@ -1,0 +1,53 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{4f75132e-4f5d-493c-958e-3bb4328089ba} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 4
+	m_BoundingBoxMin = 
+	[
+		0.000000,
+		0.000000,
+		0.000000,
+	]
+	m_BoundingBoxMax = 
+	[
+		0.000000,
+		0.000000,
+		0.000000,
+	]
+	m_flMaxDrawDistance = 10000.000000
+	m_flNoDrawTimeToGoToSleep = 0.100000
+	m_bShouldSort = false
+	m_nBehaviorVersion = 12
+	m_nSnapshotControlPoint = 1
+	m_flConstantLifespan = 5.000000
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_Renderers = 
+	[
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/inferno_fx/molotov_child_flame01a.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/inferno_fx/molotov_child_flame03a.vpcf"
+		},
+	]
+}

@@ -1,0 +1,100 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 0
+	m_flMaximumSimTime = 0.007500
+	m_flMinimumSimTime = 0.007500
+	m_nBehaviorVersion = 12
+	m_nMinimumFrames = 1
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_attachmentName = "muzzle_flash"
+					m_entityName = "parent"
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "weapons/models/aug/weapon_rif_aug.vmdl"
+				m_sequenceName = "tools_preview"
+				m_hitboxSetName = "default"
+			}
+		},
+		
+		{
+			m_name = "game"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_attachmentName = "muzzle_flash"
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 3
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 5
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						1.000000,
+						1.000000,
+						1.000000,
+					]
+					m_entityName = "self"
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "weapons/models/aug/weapon_rif_aug.vmdl"
+				m_sequenceName = "tools_preview"
+				m_hitboxSetName = "default"
+			}
+		},
+	]
+	m_PreEmissionOperators = 
+	[
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/unified_weapon_fx/weapon_muzzleflash_basic_empty.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/unified_weapon_fx/uweapon_muzflsh_aug_primaryflash.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/unified_weapon_fx/uweapon_muzflsh_aug_compensator_flash.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/unified_weapon_fx/uweapon_muzflsh_aug_primarybeam.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/unified_weapon_fx/uweapon_muzflsh_fakelight.vpcf"
+		},
+	]
+}

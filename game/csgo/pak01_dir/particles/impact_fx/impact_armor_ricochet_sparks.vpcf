@@ -1,0 +1,184 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_flConstantRadius = 1.000000
+	m_nConstantSequenceNumber = 2
+	m_nMaxParticles = 5
+	m_nBehaviorVersion = 12
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_PreEmissionOperators = 
+	[
+		
+		{
+			_class = "C_OP_SetSingleControlPointPosition"
+			m_bSetOnce = true
+			m_nCP1 = 2
+			m_vecCP1Pos = 
+			[
+				30.000000,
+				0.000000,
+				0.000000,
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 40.000000
+			}
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+			m_fSpeedMin = 20.000000
+			m_fSpeedMax = 120.000000
+			m_LocalCoordinateSystemSpeedMin = 
+			[
+				40.000000,
+				0.000000,
+				0.000000,
+			]
+			m_LocalCoordinateSystemSpeedMax = 
+			[
+				90.000000,
+				0.000000,
+				0.000000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.400000
+				m_flRandomMax = 0.100000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMin = 
+			[
+				241,
+				33,
+				18,
+			]
+			m_ColorMax = 
+			[
+				249,
+				244,
+				180,
+			]
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.500000
+				m_flRandomMax = 0.250000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_Gravity = 
+			[
+				0.000000,
+				0.000000,
+				-5.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_FadeAndKill"
+			m_flEndFadeInTime = 0.100000
+			m_flStartFadeOutTime = 0.900000
+		},
+		
+		{
+			_class = "C_OP_VectorNoise"
+			m_nFieldOutput = 0
+			m_vecOutputMin = 
+			[
+				-30.000000,
+				-30.000000,
+				-30.000000,
+			]
+			m_vecOutputMax = 
+			[
+				30.000000,
+				30.000000,
+				30.000000,
+			]
+			m_fl4NoiseScale = 20.000000
+			m_bAdditive = true
+		},
+	]
+	m_ForceGenerators = 
+	[
+		
+		{
+			_class = "C_OP_AttractToControlPoint"
+			m_fForceAmount = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 550.000000
+			}
+			m_fFalloffPower = 0.000000
+			m_TransformInput = 
+			{
+				m_nControlPoint = 2
+				m_bUseOrientation = false
+			}
+		},
+	]
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderTrails"
+			m_flConstrainRadiusToLengthRatio = 100000.000000
+			m_flLengthScale = 0.250000
+			m_flSelfIllumAmount = 1.000000
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/effects/spark.vtex"
+				},
+			]
+			m_nOutputBlendMode = "PARTICLE_OUTPUT_BLEND_MODE_ADD"
+		},
+	]
+}

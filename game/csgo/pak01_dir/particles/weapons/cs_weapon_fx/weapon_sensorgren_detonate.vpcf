@@ -1,0 +1,52 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_flMaxDrawDistance = 10000.000000
+	m_flStopSimulationAfterTime = 10000.000000
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/weapons/cs_weapon_fx/weapon_sensorgren_smoke.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/weapons/cs_weapon_fx/weapon_sensorgren_spark_01.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/weapons/cs_weapon_fx/weapon_sensorgren_spark_03.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/weapons/cs_weapon_fx/weapon_sensorgren_debris.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/weapons/cs_weapon_fx/weapon_sensorgren_spark_02.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/weapons/cs_weapon_fx/weapon_sensorgren_spark_02b.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/weapons/cs_weapon_fx/weapon_sensorgren_glow.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/weapons/cs_weapon_fx/weapon_sensorgren_glowring.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/weapons/cs_weapon_fx/weapon_sensorgren_detlight.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/weapons/cs_weapon_fx/weapon_sensorgren_wiggly.vpcf"
+		},
+	]
+	m_nBehaviorVersion = 12
+}

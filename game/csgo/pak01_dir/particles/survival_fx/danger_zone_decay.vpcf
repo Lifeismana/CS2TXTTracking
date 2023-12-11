@@ -1,0 +1,224 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 2000
+	m_nInitialParticles = 20
+	m_flConstantRadius = 128.000000
+	m_flMaxDrawDistance = 3000.000000
+	m_bScreenSpaceEffect = true
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_flOverbrightFactor = 5.000000
+			m_flAddSelfAmount = 1.000000
+			m_bSaturateColorPreAlphaBlend = false
+			m_flAnimationRate = 0.500000
+			m_bDisableOperator = true
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:""
+				},
+			]
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_fDrag = 0.070000
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flBias = 0.300000
+			m_flEndScale = 3.000000
+			m_flStartScale = 0.500000
+		},
+		
+		{
+			_class = "C_OP_FadeAndKill"
+			m_flStartAlpha = 0.000000
+			m_flStartFadeOutTime = 0.700000
+		},
+		
+		{
+			_class = "C_OP_ColorInterpolate"
+			m_flFadeStartTime = 0.500000
+			m_ColorFade = 
+			[
+				0,
+				0,
+				0,
+				null,
+			]
+		},
+		
+		{
+			_class = "C_OP_Spin"
+			m_nSpinRateDegrees = 3
+			m_nSpinRateMinDegrees = 2
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 2.000000
+				m_flRandomMax = 10.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.196078
+				m_flRandomMax = 0.862745
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 7
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 360.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 4
+		},
+		
+		{
+			_class = "C_INIT_RingWave"
+			m_bEvenDistribution = true
+			m_flParticlesPerOrbit = 20.000000
+			m_flInitialRadius = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 30.000000
+			}
+			m_flThickness = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 60.000000
+			}
+			m_flInitialSpeedMin = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 100.000000
+			}
+			m_flInitialSpeedMax = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 100.000000
+			}
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMin = 
+			[
+				78,
+				13,
+				0,
+				15,
+			]
+			m_ColorMax = 
+			[
+				86,
+				0,
+				0,
+				15,
+			]
+			m_flTintPerc = 0.250000
+			m_TintMin = 
+			[
+				44,
+				44,
+				44,
+				null,
+			]
+			m_nTintBlendMode = "4"
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 1.000000
+				m_flRandomMax = 2.500000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_RandomYawFlip"
+		},
+		
+		{
+			_class = "C_INIT_InitialVelocityNoise"
+			m_vecOutputMax = 
+			[
+				0.000000,
+				0.000000,
+				600.000000,
+			]
+			m_vecOutputMin = 
+			[
+				0.000000,
+				0.000000,
+				100.000000,
+			]
+			m_flNoiseScaleLoc = 3.000000
+			m_TransformInput = 
+			{
+				m_nType = "PT_TYPE_INVALID"
+			}
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_ContinuousEmitter"
+			m_flEmitRate = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 65.000000
+			}
+		},
+	]
+	m_ForceGenerators = 
+	[
+		
+		{
+			_class = "C_OP_TurbulenceForce"
+			m_vecNoiseAmount0 = 
+			[
+				10.000000,
+				10.000000,
+				10.000000,
+			]
+		},
+	]
+	m_nBehaviorVersion = 4
+	m_nFirstMultipleOverride_BackwardCompat = 6
+}

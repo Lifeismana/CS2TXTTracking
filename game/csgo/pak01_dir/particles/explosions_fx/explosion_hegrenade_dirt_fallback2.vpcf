@@ -1,0 +1,62 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_BoundingBoxMin = 
+	[
+		-128.000000,
+		-128.000000,
+		-32.000000,
+	]
+	m_BoundingBoxMax = 
+	[
+		128.000000,
+		128.000000,
+		128.000000,
+	]
+	m_flConstantRadius = 1.000000
+	m_nMinimumFrames = 2
+	m_flMaxDrawDistance = 10000.000000
+	m_bShouldSort = false
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/explosions_fx/explosion_child_dust10a.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/explosions_fx/explosion_child_clumps01b.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/explosions_fx/explosion_child_dust04b.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/explosions_fx/explosion_child_core06a.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/explosions_fx/explosion_child_dust07a.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/explosions_fx/explosion_child_clumps02a.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/explosions_fx/explosion_child_dust09a.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/explosions_fx/explosion_child_dust03a.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/explosions_fx/explosion_screen_hegrenade_dirt.vpcf"
+		},
+	]
+	m_nBehaviorVersion = 12
+}

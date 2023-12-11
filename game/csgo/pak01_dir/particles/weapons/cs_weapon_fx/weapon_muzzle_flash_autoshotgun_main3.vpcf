@@ -1,0 +1,225 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 8
+	m_flMaximumSimTime = 0.025000
+	m_flMinimumSimTime = 0.025000
+	m_nBehaviorVersion = 12
+	m_nFirstMultipleOverride_BackwardCompat = 6
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_ContinuousEmitter"
+			m_flEmissionDuration = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.007500
+			}
+			m_flEmitRate = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 800.000000
+			}
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+			m_fRadiusMax = 0.500000
+			m_vecDistanceBias = 
+			[
+				4.000000,
+				1.000000,
+				1.000000,
+			]
+			m_bLocalCoords = true
+			m_LocalCoordinateSystemSpeedMin = 
+			[
+				100.000000,
+				-1.000000,
+				-1.000000,
+			]
+			m_LocalCoordinateSystemSpeedMax = 
+			[
+				180.000000,
+				1.000000,
+				1.000000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 360.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 4
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.040000
+				m_flRandomMax = 0.050000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_CreationNoise"
+			m_flOutputMin = 2.000000
+			m_flOutputMax = 4.000000
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.705882
+				m_flRandomMax = 0.784314
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 7
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMin = 
+			[
+				166,
+				158,
+				152,
+				null,
+			]
+			m_ColorMax = 
+			[
+				69,
+				69,
+				69,
+				null,
+			]
+		},
+		
+		{
+			_class = "C_INIT_PositionWarp"
+			m_vecWarpMin = 
+			[
+				1.000000,
+				0.500000,
+				0.500000,
+			]
+			m_vecWarpMax = 
+			[
+				2.000000,
+				2.000000,
+				2.000000,
+			]
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_fDrag = 0.100000
+		},
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flEndTime = 0.300000
+			m_flEndScale = 2.200000
+			m_flBias = 0.400000
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flStartTime = 0.400000
+			m_flStartScale = 2.200000
+			m_flEndScale = 0.250000
+			m_flBias = 0.750000
+		},
+		
+		{
+			_class = "C_OP_PositionLock"
+		},
+		
+		{
+			_class = "C_OP_ColorInterpolate"
+			m_ColorFade = 
+			[
+				75,
+				51,
+				27,
+				null,
+			]
+			m_flFadeStartTime = 0.700000
+		},
+		
+		{
+			_class = "C_OP_FadeOut"
+			m_flFadeOutTimeMin = 0.025000
+			m_flFadeOutTimeMax = 0.050000
+			m_bProportional = false
+		},
+	]
+	m_ForceGenerators = 
+	[
+		
+		{
+			_class = "C_OP_RandomForce"
+			m_MinForce = 
+			[
+				-25.000000,
+				-25.000000,
+				-25.000000,
+			]
+			m_MaxForce = 
+			[
+				25.000000,
+				25.000000,
+				25.000000,
+			]
+		},
+	]
+	m_Renderers = 
+	[
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/weapons/cs_weapon_fx/weapon_muzzle_flash_autoshotgun_glow.vpcf"
+		},
+	]
+}

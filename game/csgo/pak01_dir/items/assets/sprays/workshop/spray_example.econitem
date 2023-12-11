@@ -1,0 +1,21 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	cs2_item_type = "CCS2EconNode_SprayKit"
+	CCS2EconNode_SprayKit = 
+	{
+		item_name = "#CSGO_Workshop"
+		description_string = "#CSGO_Workshop_EmptyString"
+		item_rarity = "common"
+		spray_class = "SprayKit_Original"
+		spray_texture_keys = 
+		{
+			exposed_param.SprayTexture = "items/assets/sprays/workshop/example_spray.tga"
+			exposed_param.SprayTextureNoDrips = "items/assets/sprays/workshop/example_spray_nodrips.tga"
+		}
+		associate_assets = 
+		[
+			resource_name:"materials/decals/sprays/workshop/spray_example.vtex",
+			resource_name:"materials/decals/sprays/workshop/spray_example_nodrips.vtex",
+		]
+	}
+}

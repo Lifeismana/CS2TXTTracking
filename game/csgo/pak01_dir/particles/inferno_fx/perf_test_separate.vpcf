@@ -1,0 +1,51 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 500
+	m_BoundingBoxMin = 
+	[
+		0.000000,
+		0.000000,
+		0.000000,
+	]
+	m_BoundingBoxMax = 
+	[
+		0.000000,
+		0.000000,
+		0.000000,
+	]
+	m_flNoDrawTimeToGoToSleep = 0.100000
+	m_nBehaviorVersion = 12
+	m_nFirstMultipleOverride_BackwardCompat = 6
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/inferno_fx/perf_test_separate_childc.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/inferno_fx/perf_test_separate_childb.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/inferno_fx/perf_test_separate_childa.vpcf"
+		},
+	]
+}

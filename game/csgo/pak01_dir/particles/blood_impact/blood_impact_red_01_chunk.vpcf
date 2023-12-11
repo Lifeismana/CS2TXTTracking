@@ -1,0 +1,197 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 160
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_flOpTimeOffsetMax = 1.000000
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/pebble1/particle_pebble_1.vtex"
+				},
+			]
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_FadeAndKill"
+			m_flOpTimeOffsetMax = 1.000000
+		},
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_flOpTimeOffsetMax = 1.000000
+			m_fDrag = 0.100000
+			m_Gravity = 
+			[
+				0.000000,
+				0.000000,
+				-400.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_OscillateScalar"
+			m_flOpTimeOffsetMax = 1.000000
+			m_FrequencyMax = 0.250000
+			m_FrequencyMin = 0.125000
+			m_RateMax = 0.100000
+			m_RateMin = -0.100000
+			m_nField = 4
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_RandomSequence"
+			m_flOpTimeOffsetMax = 1.000000
+			m_nSequenceMax = 3
+		},
+		
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+			m_flOpTimeOffsetMax = 1.000000
+			m_vecDistanceBiasAbs = 
+			[
+				0.000000,
+				1.000000,
+				0.000000,
+			]
+			m_vecDistanceBias = 
+			[
+				1.000000,
+				-3.000000,
+				1.000000,
+			]
+			m_LocalCoordinateSystemSpeedMax = 
+			[
+				-190.000000,
+				0.000000,
+				100.000000,
+			]
+			m_LocalCoordinateSystemSpeedMin = 
+			[
+				-130.000000,
+				0.000000,
+				20.000000,
+			]
+			m_fSpeedMax = 150.000000
+			m_fSpeedMin = 50.000000
+		},
+		
+		{
+			m_flOpTimeOffsetMax = 1.000000
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 360.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 4
+		},
+		
+		{
+			m_flOpTimeOffsetMax = 1.000000
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.200000
+				m_flRandomMax = 1.700000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+		},
+		
+		{
+			m_flOpTimeOffsetMax = 1.000000
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.100000
+				m_flRandomMax = 0.700000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_flOpTimeOffsetMax = 1.000000
+			m_TintMax = 
+			[
+				224,
+				224,
+				224,
+				null,
+			]
+			m_flTintPerc = 0.250000
+			m_ColorMax = 
+			[
+				77,
+				0,
+				0,
+				null,
+			]
+			m_ColorMin = 
+			[
+				123,
+				0,
+				0,
+				null,
+			]
+		},
+		
+		{
+			_class = "C_INIT_PositionOffset"
+			m_flOpTimeOffsetMax = 1.000000
+			m_bLocalCoords = true
+			m_OffsetMax = 
+			[
+				-6.000000,
+				0.000000,
+				0.000000,
+			]
+			m_OffsetMin = 
+			[
+				-6.000000,
+				0.000000,
+				0.000000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_VelocityFromCP"
+			m_flOpTimeOffsetMax = 1.000000
+			m_nControlPoint = 2
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_flOpTimeOffsetMax = 1.000000
+			m_nMaxEmittedPerFrame = 100
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 22.000000
+			}
+		},
+	]
+	m_nBehaviorVersion = 5
+	m_nFirstMultipleOverride_BackwardCompat = 6
+}

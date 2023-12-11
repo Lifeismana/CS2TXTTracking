@@ -1,0 +1,53 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/maps/de_inferno/inferno_fountain_top_spout.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/maps/de_inferno/inferno_fountain_top_ringsplashes.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/maps/de_inferno/inferno_fountain_top_rings.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/maps/de_inferno/inferno_fountain_top_spout_random.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/maps/de_inferno/inferno_fountain_med_rings.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/maps/de_inferno/inferno_fountain_med_ringsplashes.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/maps/de_inferno/inferno_fountain_low_rings.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/maps/de_inferno/inferno_fountain_low_ringsplashes.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/maps/de_inferno/inferno_fountain_bot_rings.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/maps/de_inferno/inferno_fountain_bot_ringsplashes.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/maps/de_inferno/inferno_fountain_top_spout_random2.vpcf"
+		},
+	]
+	m_nBehaviorVersion = 12
+}

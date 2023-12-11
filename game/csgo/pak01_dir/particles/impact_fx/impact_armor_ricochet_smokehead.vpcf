@@ -1,0 +1,161 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_nMaxParticles = 10
+	m_nBehaviorVersion = 12
+	m_nFirstMultipleOverride_BackwardCompat = 4
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_PreEmissionOperators = 
+	[
+		
+		{
+			_class = "C_OP_EnableChildrenFromParentParticleCount"
+			m_nNumChildrenToEnable = 10
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 10.000000
+			}
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+			m_LocalCoordinateSystemSpeedMin = 
+			[
+				350.000000,
+				25.000000,
+				-10.000000,
+			]
+			m_LocalCoordinateSystemSpeedMax = 
+			[
+				100.000000,
+				-25.000000,
+				10.000000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 1.000000
+				m_flRandomMax = 10.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 10
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 1.000000
+				m_flRandomMax = 3.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 4.000000
+				m_flRandomMax = 1.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_AgeNoise"
+			m_flAgeMin = 0.100000
+			m_flAgeMax = 0.100000
+			m_flNoiseScale = 10.000000
+			m_flNoiseScaleLoc = 100.000000
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_RemapTransformOrientationToYaw"
+		},
+		
+		{
+			_class = "C_OP_FadeAndKill"
+			m_flEndFadeInTime = 0.100000
+			m_flStartAlpha = 0.000000
+		},
+		
+		{
+			_class = "C_OP_BasicMovement"
+		},
+		
+		{
+			_class = "C_OP_SetPerChildControlPoint"
+			m_nFirstControlPoint = 1
+			m_nNumControlPoints = 10
+		},
+	]
+	m_Renderers = 
+	[
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/impact_fx/impact_armor_ricochet.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/impact_fx/impact_armor_ricochet_smokebody.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/impact_fx/impact_armor_ricochet_smokebody.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/impact_fx/impact_armor_ricochet_smokebody.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/impact_fx/impact_armor_ricochet_sparks.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/impact_fx/impact_armor_ricochet_core.vpcf"
+		},
+	]
+}

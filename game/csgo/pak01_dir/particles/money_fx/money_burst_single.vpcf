@@ -1,0 +1,37 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 128
+	m_BoundingBoxMin = 
+	[
+		-4.000000,
+		-4.000000,
+		-4.000000,
+	]
+	m_BoundingBoxMax = 
+	[
+		4.000000,
+		4.000000,
+		4.000000,
+	]
+	m_flCullRadius = 80.000000
+	m_hFallback = resource:"particles/critters/chicken/chicken_gone_cheapest.vpcf"
+	m_flConstantRadius = 0.750000
+	m_flMaxDrawDistance = 1000.000000
+	m_bShouldSort = false
+	m_bShouldBatch = true
+	m_flAggregateRadius = 512.000000
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/money_fx/money_burst_confetti_single.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/money_fx/money_burst_money_single.vpcf"
+		},
+	]
+	m_nBehaviorVersion = 12
+}

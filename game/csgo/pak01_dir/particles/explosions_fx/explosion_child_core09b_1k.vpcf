@@ -1,0 +1,287 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 150
+	m_BoundingBoxMin = 
+	[
+		-900.000000,
+		1200.000000,
+		-200.000000,
+	]
+	m_BoundingBoxMax = 
+	[
+		900.000000,
+		1300.000000,
+		200.000000,
+	]
+	m_flMaximumTimeStep = 0.000000
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_flOverbrightFactor = 4.500000
+			m_flAddSelfAmount = 1.000000
+			m_bSaturateColorPreAlphaBlend = false
+			m_bAnimateInFPS = true
+			m_flAnimationRate = 300.000000
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/fluidexplosions/fluidexplosion.vtex"
+				},
+			]
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_FadeAndKill"
+			m_flStartFadeOutTime = 0.100000
+			m_flEndFadeInTime = 0.050000
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flBias = 0.800000
+			m_flEndScale = 9.000000
+			m_flEndTime = 0.100000
+		},
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_fDrag = 0.175000
+			m_Gravity = 
+			[
+				0.000000,
+				0.000000,
+				125.000000,
+			]
+			m_flOpEndFadeOutTime = 45.000000
+			m_flOpStartFadeOutTime = 0.250000
+			m_flOpEndFadeInTime = 0.100000
+		},
+		
+		{
+			_class = "C_OP_Spin"
+			m_fSpinRateStopTime = 10.000000
+			m_nSpinRateDegrees = -1
+			m_flOpEndFadeOutTime = 45.000000
+		},
+		
+		{
+			_class = "C_OP_ColorInterpolate"
+			m_flFadeEndTime = 0.400000
+			m_ColorFade = 
+			[
+				0,
+				0,
+				0,
+				null,
+			]
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMax = 4
+		},
+		
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+			m_fSpeedRandExp = 0.750000
+			m_fSpeedMax = 900.000000
+			m_fSpeedMin = 150.000000
+			m_fRadiusMax = 750.000000
+			m_vecDistanceBiasAbs = 
+			[
+				0.000000,
+				0.000000,
+				1.000000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = -120.000000
+				m_flRandomMax = 120.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 4
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.000000
+			}
+			m_nOutputField = 7
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMax = 
+			[
+				55,
+				55,
+				55,
+				null,
+			]
+			m_ColorMin = 
+			[
+				86,
+				86,
+				86,
+				null,
+			]
+		},
+		
+		{
+			_class = "C_INIT_SequenceLifeTime"
+			m_flFramerate = 60.000000
+		},
+		
+		{
+			_class = "C_INIT_RandomYawFlip"
+			m_flPercent = 0.000000
+		},
+		
+		{
+			_class = "C_INIT_InitialVelocityNoise"
+			m_vecOutputMax = 
+			[
+				200.000000,
+				200.000000,
+				600.000000,
+			]
+			m_vecOutputMin = 
+			[
+				-200.000000,
+				-200.000000,
+				-600.000000,
+			]
+			m_vecAbsVal = 
+			[
+				1.000000,
+				1.000000,
+				1.000000,
+			]
+			m_flNoiseScaleLoc = 0.100000
+			m_TransformInput = 
+			{
+				m_nType = "PT_TYPE_INVALID"
+			}
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_flInput0 = 0.000000
+				m_flInput1 = 0.250000
+				m_flOutput0 = 0.150000
+				m_flOutput1 = 1.000000
+				m_nMapType = "PF_MAP_TYPE_REMAP"
+				m_nType = "PF_TYPE_PARTICLE_FLOAT"
+				m_nScalarAttribute = 8
+			}
+			m_nOutputField = 5
+		},
+		
+		{
+			_class = "C_INIT_DistanceToCPInit"
+			m_flInputMax = 750.000000
+			m_flOutputMin = 60.000000
+			m_flOutputMax = 15.000000
+		},
+		
+		{
+			_class = "C_INIT_PositionOffset"
+			m_OffsetMax = 
+			[
+				0.000000,
+				0.000000,
+				25.000000,
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_ContinuousEmitter"
+			m_flEmissionDuration = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.350000
+			}
+			m_flEmitRate = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 400.000000
+			}
+		},
+	]
+	m_ForceGenerators = 
+	[
+		
+		{
+			_class = "C_OP_TwistAroundAxis"
+			m_TwistAxis = 
+			[
+				0.000000,
+				1.000000,
+				0.000000,
+			]
+			m_fForceAmount = -20.000000
+		},
+		
+		{
+			_class = "C_OP_RandomForce"
+			m_MaxForce = 
+			[
+				75.000000,
+				0.000000,
+				0.000000,
+			]
+			m_MinForce = 
+			[
+				50.000000,
+				0.000000,
+				0.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_ForceBasedOnDistanceToPlane"
+			m_flMaxDist = 600.000000
+			m_vecForceAtMaxDist = 
+			[
+				200.000000,
+				0.000000,
+				0.000000,
+			]
+			m_flExponent = 2.000000
+		},
+	]
+	m_PreEmissionOperators = 
+	[
+		
+		{
+			_class = "C_OP_SetControlPointPositions"
+		},
+	]
+	m_nBehaviorVersion = 5
+	m_nFirstMultipleOverride_BackwardCompat = 5
+}

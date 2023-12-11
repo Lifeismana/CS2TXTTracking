@@ -1,0 +1,67 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{9bada39c-a931-42d0-abdd-e5c1b13d37a6} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_BoundingBoxMin = 
+	[
+		-128.000000,
+		-128.000000,
+		-32.000000,
+	]
+	m_BoundingBoxMax = 
+	[
+		128.000000,
+		128.000000,
+		128.000000,
+	]
+	m_nFallbackMaxCount = 1
+	m_flConstantRadius = 0.100000
+	m_nBehaviorVersion = 12
+	m_flConstantLifespan = 0.100000
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/player/custom_player/legacy/ctm_heavy.vmdl"
+				m_sequenceName = "pistol_aim_idle"
+				m_hitboxSetName = "cstrike"
+			}
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_FadeAndKill"
+		},
+	]
+	m_Renderers = 
+	[
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/explosions_fx/explosion_hegrenade.vpcf"
+		},
+	]
+}

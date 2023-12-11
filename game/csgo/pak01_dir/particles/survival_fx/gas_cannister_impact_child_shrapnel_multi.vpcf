@@ -1,0 +1,248 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 30
+	m_BoundingBoxMin = 
+	[
+		-400.000000,
+		-400.000000,
+		-128.000000,
+	]
+	m_BoundingBoxMax = 
+	[
+		400.000000,
+		400.000000,
+		400.000000,
+	]
+	m_flConstantRadius = 1.000000
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_flOverbrightFactor = 0.700000
+			m_bBlendFramesSeq0 = false
+			m_flAnimationRate = 0.200000
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/impact/fleks2.vtex"
+				},
+			]
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_fDrag = 0.010000
+		},
+		
+		{
+			_class = "C_OP_FadeOut"
+			m_flFadeOutTimeMin = 0.500000
+			m_flFadeOutTimeMax = 0.500000
+		},
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_Spin"
+			m_nSpinRateDegrees = 100
+			m_fSpinRateStopTime = 0.500000
+		},
+		
+		{
+			_class = "C_OP_OscillateVector"
+			m_flEndTime_min = 5.000000
+			m_FrequencyMin = 
+			[
+				-120.000008,
+				-180.000015,
+				-10.000000,
+			]
+			m_FrequencyMax = 
+			[
+				180.000000,
+				120.000000,
+				300.000000,
+			]
+			m_RateMax = 
+			[
+				154.000000,
+				252.000000,
+				232.000000,
+			]
+			m_RateMin = 
+			[
+				-54.000000,
+				-52.000000,
+				100.000000,
+			]
+			m_flEndTime_max = 5.000000
+			m_bProportionalOp = false
+			m_flStartTime_min = 0.100000
+			m_flStartTime_max = 0.200000
+		},
+		
+		{
+			_class = "C_OP_MaxVelocity"
+			m_flMaxVelocity = 200.000000
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+			m_LocalCoordinateSystemSpeedMax = 
+			[
+				0.000000,
+				0.000000,
+				800.000000,
+			]
+			m_fSpeedMax = 500.000000
+			m_fSpeedMin = 500.000000
+			m_fRadiusMin = 16.000000
+			m_fRadiusMax = 16.000000
+		},
+		
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMin = 4
+			m_nSequenceMax = 8
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_BIASED"
+				m_flRandomMin = 0.100000
+				m_flRandomMax = 1.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_nBiasType = "PF_BIAS_TYPE_EXPONENTIAL"
+				m_flBiasParameter = 0.500000
+			}
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 360.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 4
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 2.000000
+				m_flRandomMax = 4.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMin = 
+			[
+				169,
+				169,
+				169,
+				null,
+			]
+			m_ColorMax = 
+			[
+				73,
+				73,
+				73,
+				null,
+			]
+			m_flTintPerc = 0.300000
+		},
+		
+		{
+			_class = "C_INIT_RandomYawFlip"
+		},
+		
+		{
+			_class = "C_INIT_PositionOffset"
+			m_OffsetMax = 
+			[
+				0.000000,
+				0.000000,
+				32.000000,
+			]
+			m_OffsetMin = 
+			[
+				0.000000,
+				0.000000,
+				32.000000,
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_ContinuousEmitter"
+			m_flEmissionDuration = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.500000
+			}
+			m_flEmitRate = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 6.000000
+			}
+		},
+	]
+	m_ForceGenerators = 
+	[
+		
+		{
+			_class = "C_OP_AttractToControlPoint"
+			m_fFalloffPower = 0.000000
+			m_fForceAmount = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = -2000.000000
+			}
+		},
+	]
+	m_Constraints = 
+	[
+		
+		{
+			_class = "C_OP_WorldTraceConstraint"
+			m_CollisionGroupName = "DEBRIS"
+			m_flRadiusScale = 2.000000
+			m_flSlideAmount = 1.000000
+			m_flBounceAmount = 2.000000
+		},
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/survival_fx/gas_cannister_impact_smokestreak_child_crazy.vpcf"
+		},
+	]
+	m_nBehaviorVersion = 5
+	m_nFirstMultipleOverride_BackwardCompat = 6
+}

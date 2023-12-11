@@ -1,0 +1,133 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 10
+	m_BoundingBoxMin = 
+	[
+		-8000.000000,
+		-8000.000000,
+		-8000.000000,
+	]
+	m_BoundingBoxMax = 
+	[
+		8000.000000,
+		8000.000000,
+		8000.000000,
+	]
+	m_flConstantRadius = 800.000000
+	m_bScreenSpaceEffect = true
+	m_flAggregateRadius = 256.000000
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			VisibilityInputs = 
+			{
+				m_flAlphaScaleMin = 1.000000
+				m_flInputMin = 1.000000
+				m_flProxyRadius = 5000.000000
+			}
+			m_bDisableZBuffering = true
+			m_flAnimationRate = 0.500000
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/particle_flares/particle_flare_gray.vtex"
+				},
+			]
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_BasicMovement"
+		},
+		
+		{
+			_class = "C_OP_FadeIn"
+			m_flFadeInTimeMax = 4.000000
+			m_flFadeInTimeMin = 4.000000
+			m_bProportional = false
+		},
+		
+		{
+			_class = "C_OP_FadeOut"
+			m_bEaseInAndOut = false
+			m_bProportional = false
+			m_flFadeOutTimeMax = 0.100000
+			m_flFadeOutTimeMin = 0.100000
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.000000
+			}
+			m_nOutputField = 7
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 10.000000
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+			m_fRadiusMax = 75.000000
+			m_vecDistanceBias = 
+			[
+				0.000000,
+				1.000000,
+				1.000000,
+			]
+			m_vecDistanceBiasAbs = 
+			[
+				0.000000,
+				1.000000,
+				1.000000,
+			]
+			m_bLocalCoords = true
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nMaxEmittedPerFrame = 10
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 3.000000
+			}
+		},
+	]
+	m_Constraints = 
+	[
+		
+		{
+			_class = "C_OP_ConstrainDistance"
+			m_fMaxDistance = 55.000000
+			m_bGlobalCenter = true
+		},
+	]
+	m_nBehaviorVersion = 5
+}

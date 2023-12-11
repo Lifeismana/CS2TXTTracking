@@ -1,0 +1,18 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/maps/de_dust/dust_drift_paper.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/maps/de_dust/dust_drift_smoke.vpcf"
+		},
+	]
+	m_nBehaviorVersion = 12
+}

@@ -1,0 +1,92 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	cs2_item_type = "CCS2EconNode_PaintKit"
+	CCS2EconNode_PaintKit = 
+	{
+		description_string = "#CSGO_Workshop_EmptyString"
+		description_tag = "#CSGO_Workshop"
+		rarity = "common"
+		composite_material_class = "PaintKit_CustomPaintJob"
+		composite_material_keys = 
+		{
+			econ_instance.g_flPatternTexCoordRotation = 
+			[
+				0.000000,
+				0.000000,
+				0.000000,
+			]
+			econ_instance.g_flWearAmount = 
+			[
+				0.000000,
+				0.000000,
+				1.000000,
+			]
+			econ_instance.g_vPatternTexCoordOffset.0 = 
+			[
+				0.000000,
+				0.000000,
+				0.000000,
+			]
+			econ_instance.g_vPatternTexCoordOffset.1 = 
+			[
+				0.000000,
+				0.000000,
+				0.000000,
+			]
+			exposed_params.g_bIgnoreWeaponSizeScale = true
+			exposed_params.g_bOverrideAmbientOcclusion = false
+			exposed_params.g_bUseNormalMap = false
+			exposed_params.g_bUsePearlescenceMask = false
+			exposed_params.g_bUseRoughness = false
+			exposed_params.g_flPaintRoughness = 0.600000
+			exposed_params.g_flPatternTexCoordScale = 1.000000
+			exposed_params.g_flPearlescentScale = 0.000000
+			exposed_params.g_tPattern = "items/assets/paintkits/workshop/example_custom_paint.tga"
+		}
+		all_composite_material_keys = 
+		{
+			econ_instance.g_flPatternTexCoordRotation = 
+			[
+				0.000000,
+				0.000000,
+				0.000000,
+			]
+			econ_instance.g_flWearAmount = 
+			[
+				0.000000,
+				0.000000,
+				1.000000,
+			]
+			econ_instance.g_vPatternTexCoordOffset.0 = 
+			[
+				0.000000,
+				0.000000,
+				0.000000,
+			]
+			econ_instance.g_vPatternTexCoordOffset.1 = 
+			[
+				0.000000,
+				0.000000,
+				0.000000,
+			]
+			exposed_params.g_bIgnoreWeaponSizeScale = true
+			exposed_params.g_bOverrideAmbientOcclusion = false
+			exposed_params.g_bUseNormalMap = false
+			exposed_params.g_bUsePearlescenceMask = false
+			exposed_params.g_bUseRoughness = false
+			exposed_params.g_flPaintRoughness = 0.600000
+			exposed_params.g_flPatternTexCoordScale = 1.000000
+			exposed_params.g_flPearlescentScale = 0.000000
+			exposed_params.g_tFinalAmbientOcclusion = "materials/default/default_ao.tga"
+			exposed_params.g_tNormal = "items/assets/paintkits/workshop/example_custom_paint_normal.tga"
+			exposed_params.g_tPaintRoughness = "materials/default/default_rough.tga"
+			exposed_params.g_tPattern = "items/assets/paintkits/workshop/example_custom_paint.tga"
+			exposed_params.g_tPearlescenceMask = "materials/default/default_mask.tga"
+		}
+		preview_weapon = "weapon_awp"
+		associate_assets = 
+		[
+			resource_name:"weapons/paints/workshop/cu_paintkit_example.vcompmat",
+		]
+	}
+}

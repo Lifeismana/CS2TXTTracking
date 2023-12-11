@@ -1,0 +1,189 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 64
+	m_hFallback = resource:"particles/weapons/cs_weapon_fx/weapon_muzzle_flash_smg_fallback.vpcf"
+	m_nFallbackMaxCount = 3
+	m_flMaximumSimTime = 0.010000
+	m_flMinimumSimTime = 0.025000
+	m_flMaxDrawDistance = 5000.000000
+	m_bShouldSort = false
+	m_nBehaviorVersion = 12
+	m_nFirstMultipleOverride_BackwardCompat = 7
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 6
+			}
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0
+				m_flRandomMax = 360
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 4
+		},
+		
+		{
+			_class = "C_INIT_CreationNoise"
+			m_flOutputMin = 2.000000
+			m_flOutputMax = 3.000000
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.666667
+				m_flRandomMax = 0.784314
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 7
+		},
+		
+		{
+			_class = "C_INIT_CreateSequentialPathV2"
+			m_flNumToAssign = 6
+			m_PathParams = 
+			{
+				m_nEndControlPointNumber = 1
+			}
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_nTintBlendMode = "4"
+			m_ColorMin = 
+			[
+				231,
+				231,
+				231,
+				null,
+			]
+			m_ColorMax = 
+			[
+				126,
+				126,
+				126,
+				null,
+			]
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.050000
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMax = 18
+			m_nSequenceMin = 5
+		},
+		
+		{
+			_class = "C_INIT_DistanceToCPInit"
+			m_flInputMin = 1
+			m_flInputMax = 8
+			m_flOutputMin = 1.500000
+			m_flOutputMax = 0.300000
+			m_nSetMethod = "PARTICLE_SET_SCALE_INITIAL_VALUE"
+		},
+		
+		{
+			_class = "C_INIT_RandomYawFlip"
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+		},
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flEndTime = 0.300000
+			m_flEndScale = 2.000000
+			m_flBias = 0.400000
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flStartTime = 0.300000
+			m_flStartScale = 2.000000
+			m_flBias = 0.750000
+		},
+		
+		{
+			_class = "C_OP_ColorInterpolate"
+			m_ColorFade = 
+			[
+				148,
+				100,
+				53,
+				null,
+			]
+			m_flFadeStartTime = 0.700000
+		},
+		
+		{
+			_class = "C_OP_FadeOut"
+			m_flFadeOutTimeMin = 1.000000
+			m_flFadeOutTimeMax = 1.000000
+		},
+	]
+	m_Renderers = 
+	[
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/weapons/cs_weapon_fx/weapon_muzzle_flash_smg_glow.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/weapons/cs_weapon_fx/weapon_muzzle_flash_sparks4.vpcf"
+		},
+	]
+}

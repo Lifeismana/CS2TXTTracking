@@ -1,0 +1,224 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 60
+	m_BoundingBoxMin = 
+	[
+		-64.000000,
+		-64.000000,
+		-64.000000,
+	]
+	m_BoundingBoxMax = 
+	[
+		64.000000,
+		64.000000,
+		64.000000,
+	]
+	m_flCullRadius = 80.000000
+	m_flMaxDrawDistance = 1500.000000
+	m_bShouldBatch = true
+	m_flAggregateRadius = 256.000000
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			VisibilityInputs = 
+			{
+				m_flProxyRadius = 8.000000
+				m_flRadiusScaleMin = 0.000000
+			}
+			m_flOverbrightFactor = 0.700000
+			m_bBlendFramesSeq0 = false
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/impact/fleks.vtex"
+				},
+			]
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_Gravity = 
+			[
+				0.000000,
+				0.000000,
+				-500.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_FadeOut"
+		},
+		
+		{
+			_class = "C_OP_Spin"
+			m_flOpStartFadeOutTime = 0.500000
+			m_flOpEndFadeOutTime = 0.750000
+			m_nSpinRateDegrees = 120
+		},
+		
+		{
+			_class = "C_OP_VelocityDecay"
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMin = 50
+			m_nSequenceMax = 54
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 360.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 4
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.250000
+				m_flRandomMax = 0.750000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.400000
+				m_flRandomMax = 1.500000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMin = 
+			[
+				117,
+				98,
+				80,
+				null,
+			]
+			m_ColorMax = 
+			[
+				59,
+				62,
+				68,
+				null,
+			]
+			m_flTintPerc = 0.400000
+			m_flUpdateThreshold = 128.000000
+			m_nTintCP = 4
+			m_nTintBlendMode = "4"
+		},
+		
+		{
+			_class = "C_INIT_CreateWithinBox"
+			m_vecMax = 
+			[
+				6.000000,
+				6.000000,
+				0.000000,
+			]
+			m_vecMin = 
+			[
+				-6.000000,
+				-6.000000,
+				0.000000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_VelocityRandom"
+			m_LocalCoordinateSystemSpeedMax = 
+			[
+				25.000000,
+				25.000000,
+				100.000000,
+			]
+			m_LocalCoordinateSystemSpeedMin = 
+			[
+				-25.000000,
+				-25.000000,
+				150.000000,
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_ContinuousEmitter"
+			m_flEmissionDuration = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 2.500000
+			}
+			m_flEmitRate = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 20.000000
+			}
+		},
+	]
+	m_Constraints = 
+	[
+		
+		{
+			_class = "C_OP_WorldTraceConstraint"
+			m_CollisionGroupName = "DEBRIS"
+			m_bBrushOnly = true
+			m_flRadiusScale = 0.500000
+			m_flSlideAmount = 0.500000
+		},
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/critters/chicken/chicken_crumble_dust.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/critters/chicken/chicken_rez_dirt_child.vpcf"
+		},
+		
+		{
+			m_flDelay = 0.500000
+			m_ChildRef = resource:"particles/critters/chicken/chicken_rez_dirt_child_clumps.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/critters/chicken/chicken_rez_dirt_smoke_puff.vpcf"
+		},
+	]
+	m_nBehaviorVersion = 5
+	m_nFirstMultipleOverride_BackwardCompat = 6
+}

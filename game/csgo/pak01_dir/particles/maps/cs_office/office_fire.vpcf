@@ -1,0 +1,44 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 640
+	m_flMaxDrawDistance = 10000.000000
+	m_flNoDrawTimeToGoToSleep = 0.100000
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/maps/cs_office/office_child_flame03b.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/maps/cs_office/office_child_glow03a.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/maps/cs_office/office_child_flame02b.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/maps/cs_office/office_smoke.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/maps/cs_office/office_child_flame01b.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/maps/cs_office/office_child_glow02b.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/maps/cs_office/office_child_embers01a.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/maps/cs_office/office_child_glow04a.vpcf"
+		},
+	]
+	m_nBehaviorVersion = 12
+}

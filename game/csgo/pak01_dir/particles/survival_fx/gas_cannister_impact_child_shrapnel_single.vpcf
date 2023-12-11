@@ -1,0 +1,224 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 50
+	m_flConstantRadius = 1.000000
+	m_bShouldSort = false
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_flOverbrightFactor = 0.700000
+			m_bBlendFramesSeq0 = false
+			m_flAnimationRate = 0.200000
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/impact/fleks2.vtex"
+				},
+			]
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_fDrag = 0.080000
+			m_Gravity = 
+			[
+				0.000000,
+				0.000000,
+				-100.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_FadeOut"
+			m_flFadeOutTimeMax = 0.500000
+			m_flFadeOutTimeMin = 0.500000
+		},
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_Spin"
+			m_fSpinRateStopTime = 0.500000
+			m_nSpinRateDegrees = 100
+		},
+		
+		{
+			_class = "C_OP_OscillateVector"
+			m_RateMin = 
+			[
+				-152.000000,
+				-152.000000,
+				-22.000000,
+			]
+			m_RateMax = 
+			[
+				152.000000,
+				152.000000,
+				232.000000,
+			]
+			m_FrequencyMax = 
+			[
+				200.000000,
+				200.000000,
+				200.000000,
+			]
+			m_FrequencyMin = 
+			[
+				-100.000000,
+				-100.000000,
+				-100.000000,
+			]
+			m_flStartTime_min = 0.100000
+			m_flStartTime_max = 0.100000
+			m_bProportionalOp = false
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+			m_LocalCoordinateSystemSpeedMax = 
+			[
+				10.000000,
+				10.000000,
+				150.000000,
+			]
+			m_LocalCoordinateSystemSpeedMin = 
+			[
+				-10.000000,
+				-10.000000,
+				100.000000,
+			]
+			m_fSpeedMax = 1000.000000
+			m_fSpeedMin = 800.000000
+			m_fRadiusMax = 70.000000
+			m_fRadiusMin = 50.000000
+		},
+		
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMax = 8
+			m_nSequenceMin = 4
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_BIASED"
+				m_flRandomMin = 0.500000
+				m_flRandomMax = 8.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_nBiasType = "PF_BIAS_TYPE_EXPONENTIAL"
+				m_flBiasParameter = 0.500000
+			}
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 360.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 4
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.000000
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_flTintPerc = 0.300000
+			m_ColorMax = 
+			[
+				73,
+				73,
+				73,
+				null,
+			]
+			m_ColorMin = 
+			[
+				169,
+				169,
+				169,
+				null,
+			]
+		},
+		
+		{
+			_class = "C_INIT_InitialRepulsionVelocity"
+			m_nChildCP = 1
+			m_nControlPointNumber = 11
+			m_bInherit = true
+			m_vecOutputMax = 
+			[
+				3.000000,
+				3.000000,
+				3.000000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_RandomYawFlip"
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.000000
+			}
+		},
+	]
+	m_Constraints = 
+	[
+		
+		{
+			_class = "C_OP_WorldTraceConstraint"
+			m_CollisionGroupName = "DEBRIS"
+			m_bBrushOnly = true
+			m_flSlideAmount = 0.300000
+			m_flBounceAmount = 0.050000
+			m_nCollisionMode = "COLLISION_MODE_USE_NEAREST_TRACE"
+		},
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/survival_fx/gas_cannister_impact_shrapnel_cap.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/survival_fx/gas_cannister_impact_smokestreak_child_crazy.vpcf"
+		},
+	]
+	m_nBehaviorVersion = 5
+	m_nFirstMultipleOverride_BackwardCompat = 6
+}

@@ -1,0 +1,252 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_BoundingBoxMin = 
+	[
+		-8.000000,
+		-8.000000,
+		-8.000000,
+	]
+	m_BoundingBoxMax = 
+	[
+		8.000000,
+		8.000000,
+		8.000000,
+	]
+	m_nAllowRenderControlPoint = 2
+	m_bShouldSort = false
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_flOverbrightFactor = 5.000000
+			m_flAnimationRate = 0.250000
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/particle_glow_05.vtex"
+				},
+			]
+			m_nOutputBlendMode = "PARTICLE_OUTPUT_BLEND_MODE_ADD"
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_BasicMovement"
+		},
+		
+		{
+			_class = "C_OP_FadeOut"
+		},
+		
+		{
+			_class = "C_OP_OscillateVector"
+			m_flStartTime_max = 1.000000
+			m_flStartTime_min = 1.000000
+			m_bProportional = false
+			m_FrequencyMax = 
+			[
+				0.250000,
+				0.250000,
+				0.000000,
+			]
+			m_FrequencyMin = 
+			[
+				0.125000,
+				0.125000,
+				0.000000,
+			]
+			m_RateMax = 
+			[
+				0.125000,
+				0.125000,
+				0.000000,
+			]
+			m_RateMin = 
+			[
+				-0.125000,
+				-0.125000,
+				0.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_FadeIn"
+			m_flFadeInTimeMin = 0.125000
+			m_flFadeInTimeMax = 0.125000
+		},
+		
+		{
+			_class = "C_OP_OscillateScalar"
+			m_FrequencyMax = 64.000000
+			m_FrequencyMin = 43.000000
+			m_RateMax = 20.000000
+			m_RateMin = -20.000000
+			m_nField = 16
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.039216
+				m_flRandomMax = 0.117647
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 7
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 8.000000
+				m_flRandomMax = 16.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 2.000000
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMax = 2
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMax = 
+			[
+				255,
+				102,
+				0,
+				null,
+			]
+			m_ColorMin = 
+			[
+				255,
+				96,
+				0,
+				null,
+			]
+		},
+		
+		{
+			_class = "C_INIT_CreateFromParentParticles"
+		},
+		
+		{
+			_class = "C_INIT_InitialVelocityNoise"
+			m_flNoiseScale = 0.015000
+			m_flNoiseScaleLoc = 0.100000
+			m_vecAbsVal = 
+			[
+				1.000000,
+				1.000000,
+				0.000000,
+			]
+			m_vecAbsValInv = 
+			[
+				1.000000,
+				1.000000,
+				0.000000,
+			]
+			m_vecOutputMin = 
+			[
+				-28.000000,
+				-28.000000,
+				-50.000000,
+			]
+			m_vecOutputMax = 
+			[
+				28.000000,
+				28.000000,
+				-30.000000,
+			]
+			m_TransformInput = 
+			{
+				m_nType = "PT_TYPE_INVALID"
+			}
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_ContinuousEmitter"
+			m_flOpStartFadeOutTime = 0.100000
+			m_flOpEndFadeOutTime = 0.100000
+			m_flOpFadeOscillatePeriod = 5.000000
+			m_flEmitRate = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 200.000000
+			}
+		},
+	]
+	m_ForceGenerators = 
+	[
+		
+		{
+			_class = "C_OP_TwistAroundAxis"
+			m_flOpStartFadeOutTime = 0.100000
+			m_flOpEndFadeOutTime = 0.100000
+			m_flOpFadeOscillatePeriod = 18.000000
+			m_fForceAmount = 30.000000
+		},
+		
+		{
+			_class = "C_OP_TwistAroundAxis"
+			m_flOpStartFadeOutTime = 0.100000
+			m_flOpEndFadeOutTime = 0.100000
+			m_flOpFadeOscillatePeriod = 7.000000
+			m_fForceAmount = -20.000000
+		},
+		
+		{
+			_class = "C_OP_TwistAroundAxis"
+			m_flOpStartFadeOutTime = 0.100000
+			m_flOpEndFadeOutTime = 0.100000
+			m_flOpFadeOscillatePeriod = 13.000000
+			m_fForceAmount = 15.000000
+			m_TwistAxis = 
+			[
+				0.000000,
+				1.000000,
+				1.000000,
+			]
+		},
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/rain_fx/ash_burning_fire.vpcf"
+		},
+	]
+	m_nBehaviorVersion = 5
+	m_nFirstMultipleOverride_BackwardCompat = 6
+}

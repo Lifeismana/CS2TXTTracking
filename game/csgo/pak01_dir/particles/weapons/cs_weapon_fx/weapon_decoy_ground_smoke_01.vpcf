@@ -1,0 +1,258 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{4f75132e-4f5d-493c-958e-3bb4328089ba} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 100
+	m_flNoDrawTimeToGoToSleep = 0.100000
+	m_flMinimumTimeStep = 0.100000
+	m_nBehaviorVersion = 1
+	m_nFirstMultipleOverride_BackwardCompat = 7
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_ContinuousEmitter"
+			m_flEmissionScale = 0.250000
+			m_flOpStartFadeOutTime = 10.000000
+			m_flOpEndFadeOutTime = 14.000000
+			m_flOpEndFadeInTime = 10.000000
+			m_flEmissionDuration = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 30.000000
+			}
+			m_flEmitRate = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 50.000000
+			}
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.000000
+			}
+			m_nOutputField = 1
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 360.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 4
+		},
+		
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMax = 5
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMax = 
+			[
+				117,
+				81,
+				67,
+				null,
+			]
+			m_ColorMin = 
+			[
+				130,
+				74,
+				43,
+				null,
+			]
+		},
+		
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+			m_flEndCPGrowthTime = 2.000000
+			m_fRadiusMax = 6.000000
+			m_vecDistanceBiasAbs = 
+			[
+				0.000000,
+				0.000000,
+				1.000000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.156863
+				m_flRandomMax = 0.235294
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 7
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 20.000000
+				m_flRandomMax = 22.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+		},
+		
+		{
+			_class = "C_INIT_PositionWarp"
+			m_vecWarpMax = 
+			[
+				1.000000,
+				1.000000,
+				0.100000,
+			]
+			m_flWarpTime = 5.000000
+			m_flWarpStartTime = 10.000000
+		},
+		
+		{
+			_class = "C_INIT_InitialVelocityNoise"
+			m_vecOutputMax = 
+			[
+				32.000000,
+				32.000000,
+				64.000000,
+			]
+			m_vecOutputMin = 
+			[
+				-32.000000,
+				-32.000000,
+				64.000000,
+			]
+			m_flNoiseScaleLoc = 0.000000
+			m_flNoiseScale = 0.100000
+			m_TransformInput = 
+			{
+				m_nType = "PT_TYPE_INVALID"
+			}
+		},
+		
+		{
+			_class = "C_INIT_RandomYawFlip"
+		},
+		
+		{
+			_class = "C_INIT_PositionOffset"
+			m_OffsetMax = 
+			[
+				0.000000,
+				0.000000,
+				2.000000,
+			]
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flStartScale = 0.500000
+			m_bEaseInAndOut = true
+		},
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_flOpStartFadeInTime = 12.000000
+			m_flOpEndFadeInTime = 12.000000
+			m_Gravity = 
+			[
+				0.000000,
+				0.000000,
+				20.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_FadeOut"
+			m_flFadeBias = 0.250000
+			m_flFadeOutTimeMin = 0.400000
+			m_flFadeOutTimeMax = 0.600000
+		},
+		
+		{
+			_class = "C_OP_FadeIn"
+			m_flFadeInTimeMin = 0.200000
+			m_flFadeInTimeMax = 0.500000
+		},
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_flOpEndFadeOutTime = 12.000000
+			m_Gravity = 
+			[
+				0.000000,
+				0.000000,
+				30.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_ColorInterpolate"
+			m_ColorFade = 
+			[
+				0,
+				0,
+				0,
+				null,
+			]
+			m_flFadeStartTime = 0.100000
+			m_flFadeEndTime = 0.500000
+		},
+	]
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_flStartFadeSize = 0.400000
+			m_flEndFadeSize = 0.650000
+			m_bAnimateInFPS = true
+			m_flAnimationRate = 14.000000
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/smoke1/smoke1.vtex"
+				},
+			]
+		},
+	]
+}

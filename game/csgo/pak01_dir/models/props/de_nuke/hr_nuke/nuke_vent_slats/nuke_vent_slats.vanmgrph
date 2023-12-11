@@ -1,0 +1,1956 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{26a28fb5-3562-4740-95da-eb8cf58ab360} -->
+{
+	_class = "CAnimGraphModelBinding"
+	m_modelName = "models/props/de_nuke/hr_nuke/nuke_vent_slats/nuke_vent_slats.vmdl"
+	m_pSharedData = 
+	{
+		_class = "CAnimUpdateSharedData"
+		m_nodes = 
+		[
+			
+			{
+				_class = "CSingleFrameUpdateNode"
+				m_nodePath = 
+				{
+					m_path = 
+					[
+						
+						{
+							m_id = 600681193
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+					]
+					m_nCount = 1
+				}
+				m_name = "open : 0"
+				m_networkMode = "ServerAuthoritative"
+				m_actions = 
+				[
+				]
+				m_hPoseCacheHandle = 
+				{
+					m_nIndex = 0
+					m_eType = "POSETYPE_STATIC"
+				}
+				m_hSequence = 0
+				m_flCycle = 0.000000
+			},
+			
+			{
+				_class = "CSequenceUpdateNode"
+				m_nodePath = 
+				{
+					m_path = 
+					[
+						
+						{
+							m_id = 1445765924
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+					]
+					m_nCount = 1
+				}
+				m_name = "closed_to_open"
+				m_networkMode = "ServerAuthoritative"
+				m_paramSpans = 
+				{
+					m_spans = 
+					[
+					]
+				}
+				m_tags = 
+				[
+				]
+				m_hSequence = 3
+				m_playbackSpeed = 1.000000
+				m_duration = 0.666667
+				m_bLoop = false
+			},
+			
+			{
+				_class = "CSequenceUpdateNode"
+				m_nodePath = 
+				{
+					m_path = 
+					[
+						
+						{
+							m_id = 1268267884
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+					]
+					m_nCount = 1
+				}
+				m_name = "open_to_closed"
+				m_networkMode = "ServerAuthoritative"
+				m_paramSpans = 
+				{
+					m_spans = 
+					[
+					]
+				}
+				m_tags = 
+				[
+				]
+				m_hSequence = 1
+				m_playbackSpeed = 1.000000
+				m_duration = 0.666667
+				m_bLoop = false
+			},
+			
+			{
+				_class = "CSingleFrameUpdateNode"
+				m_nodePath = 
+				{
+					m_path = 
+					[
+						
+						{
+							m_id = 62916315
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+					]
+					m_nCount = 1
+				}
+				m_name = "closed : 0"
+				m_networkMode = "ServerAuthoritative"
+				m_actions = 
+				[
+				]
+				m_hPoseCacheHandle = 
+				{
+					m_nIndex = 1
+					m_eType = "POSETYPE_STATIC"
+				}
+				m_hSequence = 2
+				m_flCycle = 0.000000
+			},
+			
+			{
+				_class = "CStateMachineUpdateNode"
+				m_nodePath = 
+				{
+					m_path = 
+					[
+						
+						{
+							m_id = 956197908
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+					]
+					m_nCount = 1
+				}
+				m_name = "State Machine"
+				m_networkMode = "ServerAuthoritative"
+				m_stateMachine = 
+				{
+					_class = "CAnimStateMachineUpdater"
+					m_states = 
+					[
+						
+						{
+							m_name = "open"
+							m_hScript = 
+							{
+								m_id = 0
+							}
+							m_transitionIndices = 
+							[
+								0,
+							]
+							m_actions = 
+							[
+							]
+							m_stateID = 
+							{
+								m_id = 1654215295
+							}
+							m_bIsStartState = 1
+							m_bIsEndState = 0
+							m_bIsPassthrough = 0
+						},
+						
+						{
+							m_name = "opening"
+							m_hScript = 
+							{
+								m_id = 1
+							}
+							m_transitionIndices = 
+							[
+								1,
+								2,
+							]
+							m_actions = 
+							[
+							]
+							m_stateID = 
+							{
+								m_id = 137169575
+							}
+							m_bIsStartState = 0
+							m_bIsEndState = 0
+							m_bIsPassthrough = 0
+						},
+						
+						{
+							m_name = "closing"
+							m_hScript = 
+							{
+								m_id = 2
+							}
+							m_transitionIndices = 
+							[
+								3,
+								4,
+							]
+							m_actions = 
+							[
+							]
+							m_stateID = 
+							{
+								m_id = 971993757
+							}
+							m_bIsStartState = 0
+							m_bIsEndState = 0
+							m_bIsPassthrough = 0
+						},
+						
+						{
+							m_name = "closed"
+							m_hScript = 
+							{
+								m_id = 3
+							}
+							m_transitionIndices = 
+							[
+								5,
+							]
+							m_actions = 
+							[
+							]
+							m_stateID = 
+							{
+								m_id = 1400561571
+							}
+							m_bIsStartState = 0
+							m_bIsEndState = 0
+							m_bIsPassthrough = 0
+						},
+					]
+					m_transitions = 
+					[
+						
+						{
+							m_srcStateIndex = 0
+							m_destStateIndex = 2
+							m_bDisabled = 0
+						},
+						
+						{
+							m_srcStateIndex = 1
+							m_destStateIndex = 0
+							m_bDisabled = 0
+						},
+						
+						{
+							m_srcStateIndex = 1
+							m_destStateIndex = 2
+							m_bDisabled = 0
+						},
+						
+						{
+							m_srcStateIndex = 2
+							m_destStateIndex = 3
+							m_bDisabled = 0
+						},
+						
+						{
+							m_srcStateIndex = 2
+							m_destStateIndex = 1
+							m_bDisabled = 0
+						},
+						
+						{
+							m_srcStateIndex = 3
+							m_destStateIndex = 1
+							m_bDisabled = 0
+						},
+					]
+					m_startStateIndex = 0
+				}
+				m_stateData = 
+				[
+					
+					{
+						m_pChild = 
+						{
+							m_nodeIndex = 0
+						}
+						m_bExclusiveRootMotion = 0
+					},
+					
+					{
+						m_pChild = 
+						{
+							m_nodeIndex = 1
+						}
+						m_bExclusiveRootMotion = 0
+					},
+					
+					{
+						m_pChild = 
+						{
+							m_nodeIndex = 2
+						}
+						m_bExclusiveRootMotion = 0
+					},
+					
+					{
+						m_pChild = 
+						{
+							m_nodeIndex = 3
+						}
+						m_bExclusiveRootMotion = 0
+					},
+				]
+				m_transitionData = 
+				[
+					
+					{
+						m_curve = 
+						{
+							m_flControlPoint1 = 0.000000
+							m_flControlPoint2 = 1.000000
+						}
+						m_blendDuration = 
+						{
+							m_constValue = 0.200000
+							m_hParam = 
+							{
+								m_type = "ANIMPARAM_UNKNOWN"
+								m_index = 255
+							}
+						}
+						m_resetCycleValue = 
+						{
+							m_constValue = 0.000000
+							m_hParam = 
+							{
+								m_type = "ANIMPARAM_UNKNOWN"
+								m_index = 255
+							}
+						}
+						m_bReset = 1
+						m_resetCycleOption = 0
+					},
+					
+					{
+						m_curve = 
+						{
+							m_flControlPoint1 = 0.000000
+							m_flControlPoint2 = 1.000000
+						}
+						m_blendDuration = 
+						{
+							m_constValue = 0.200000
+							m_hParam = 
+							{
+								m_type = "ANIMPARAM_UNKNOWN"
+								m_index = 255
+							}
+						}
+						m_resetCycleValue = 
+						{
+							m_constValue = 0.000000
+							m_hParam = 
+							{
+								m_type = "ANIMPARAM_UNKNOWN"
+								m_index = 255
+							}
+						}
+						m_bReset = 0
+						m_resetCycleOption = 0
+					},
+					
+					{
+						m_curve = 
+						{
+							m_flControlPoint1 = 0.000000
+							m_flControlPoint2 = 1.000000
+						}
+						m_blendDuration = 
+						{
+							m_constValue = 0.200000
+							m_hParam = 
+							{
+								m_type = "ANIMPARAM_UNKNOWN"
+								m_index = 255
+							}
+						}
+						m_resetCycleValue = 
+						{
+							m_constValue = 0.000000
+							m_hParam = 
+							{
+								m_type = "ANIMPARAM_UNKNOWN"
+								m_index = 255
+							}
+						}
+						m_bReset = 1
+						m_resetCycleOption = 2
+					},
+					
+					{
+						m_curve = 
+						{
+							m_flControlPoint1 = 0.000000
+							m_flControlPoint2 = 1.000000
+						}
+						m_blendDuration = 
+						{
+							m_constValue = 0.200000
+							m_hParam = 
+							{
+								m_type = "ANIMPARAM_UNKNOWN"
+								m_index = 255
+							}
+						}
+						m_resetCycleValue = 
+						{
+							m_constValue = 0.000000
+							m_hParam = 
+							{
+								m_type = "ANIMPARAM_UNKNOWN"
+								m_index = 255
+							}
+						}
+						m_bReset = 0
+						m_resetCycleOption = 0
+					},
+					
+					{
+						m_curve = 
+						{
+							m_flControlPoint1 = 0.000000
+							m_flControlPoint2 = 1.000000
+						}
+						m_blendDuration = 
+						{
+							m_constValue = 0.200000
+							m_hParam = 
+							{
+								m_type = "ANIMPARAM_UNKNOWN"
+								m_index = 255
+							}
+						}
+						m_resetCycleValue = 
+						{
+							m_constValue = 0.000000
+							m_hParam = 
+							{
+								m_type = "ANIMPARAM_UNKNOWN"
+								m_index = 255
+							}
+						}
+						m_bReset = 1
+						m_resetCycleOption = 2
+					},
+					
+					{
+						m_curve = 
+						{
+							m_flControlPoint1 = 0.000000
+							m_flControlPoint2 = 1.000000
+						}
+						m_blendDuration = 
+						{
+							m_constValue = 0.200000
+							m_hParam = 
+							{
+								m_type = "ANIMPARAM_UNKNOWN"
+								m_index = 255
+							}
+						}
+						m_resetCycleValue = 
+						{
+							m_constValue = 0.000000
+							m_hParam = 
+							{
+								m_type = "ANIMPARAM_UNKNOWN"
+								m_index = 255
+							}
+						}
+						m_bReset = 1
+						m_resetCycleOption = 0
+					},
+				]
+				m_bBlockWaningTags = false
+				m_bLockStateWhenWaning = false
+			},
+			
+			{
+				_class = "CRootUpdateNode"
+				m_nodePath = 
+				{
+					m_path = 
+					[
+						
+						{
+							m_id = 1369201575
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+					]
+					m_nCount = 1
+				}
+				m_name = "Final Pose"
+				m_networkMode = "ServerAuthoritative"
+				m_pChildNode = 
+				{
+					m_nodeIndex = 4
+				}
+			},
+		]
+		m_nodeIndexMap = 
+		[
+			
+			{
+				key = 
+				{
+					m_path = 
+					[
+						
+						{
+							m_id = 62916315
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+					]
+					m_nCount = 1
+				}
+				value = 3
+			},
+			
+			{
+				key = 
+				{
+					m_path = 
+					[
+						
+						{
+							m_id = 600681193
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+					]
+					m_nCount = 1
+				}
+				value = 0
+			},
+			
+			{
+				key = 
+				{
+					m_path = 
+					[
+						
+						{
+							m_id = 956197908
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+					]
+					m_nCount = 1
+				}
+				value = 4
+			},
+			
+			{
+				key = 
+				{
+					m_path = 
+					[
+						
+						{
+							m_id = 1268267884
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+					]
+					m_nCount = 1
+				}
+				value = 2
+			},
+			
+			{
+				key = 
+				{
+					m_path = 
+					[
+						
+						{
+							m_id = 1369201575
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+					]
+					m_nCount = 1
+				}
+				value = 5
+			},
+			
+			{
+				key = 
+				{
+					m_path = 
+					[
+						
+						{
+							m_id = 1445765924
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+						
+						{
+							m_id = 4294967295
+						},
+					]
+					m_nCount = 1
+				}
+				value = 1
+			},
+		]
+		m_components = 
+		[
+		]
+		m_pParamListUpdater = 
+		{
+			_class = "CAnimParameterManagerUpdater"
+			m_parameters = 
+			[
+				
+				{
+					_class = "CBoolAnimParameter"
+					m_name = "b_use_autoclear"
+					m_group = ""
+					m_id = 
+					{
+						m_id = 629849057
+					}
+					m_componentName = ""
+					m_bNetworkingRequested = false
+					m_bIsReferenced = true
+					m_previewButton = "ANIMPARAM_BUTTON_NONE"
+					m_eNetworkSetting = "Auto"
+					m_bUseMostRecentValue = false
+					m_bAutoReset = true
+					m_bGameWritable = true
+					m_bGraphWritable = true
+					m_bDefaultValue = false
+				},
+			]
+			m_idToIndexMap = 
+			[
+				
+				{
+					key = 
+					{
+						m_id = 629849057
+					}
+					value = 0
+				},
+			]
+			m_nameToIndexMap = 
+			{
+				b_use_autoclear = 0
+			}
+			m_indexToHandle = 
+			[
+				
+				{
+					m_type = "ANIMPARAM_BOOL"
+					m_index = 0
+				},
+			]
+			m_autoResetParams = 
+			[
+				
+				[
+					
+					{
+						m_type = "ANIMPARAM_BOOL"
+						m_index = 0
+					},
+					
+					{
+						m_nType = 1
+						m_data = false
+					},
+				],
+			]
+			m_autoResetMap = 
+			[
+				
+				{
+					key = 
+					{
+						m_type = "ANIMPARAM_BOOL"
+						m_index = 0
+					}
+					value = 0
+				},
+			]
+		}
+		m_pTagManagerUpdater = 
+		{
+			_class = "CAnimTagManagerUpdater"
+			m_tags = 
+			[
+			]
+		}
+		m_scriptManager = 
+		{
+			_class = "CAnimScriptManager"
+			m_scriptInfo = 
+			[
+				
+				{
+					m_code = "(b_use_autoclear == (1)) ? 0 : (-1)"
+					m_paramsModified = 
+					[
+					]
+					m_proxyReadParams = 
+					[
+					]
+					m_proxyWriteParams = 
+					[
+					]
+					m_eScriptType = "ANIMSCRIPT_FUSE_STATEMACHINE"
+				},
+				
+				{
+					m_code = "(GetTimeTillFinished() <= 0) ? 0 : ((b_use_autoclear == (1)) ? 1 : (-1))"
+					m_paramsModified = 
+					[
+					]
+					m_proxyReadParams = 
+					[
+					]
+					m_proxyWriteParams = 
+					[
+					]
+					m_eScriptType = "ANIMSCRIPT_FUSE_STATEMACHINE"
+				},
+				
+				{
+					m_code = "(GetTimeTillFinished() <= 0) ? 0 : ((b_use_autoclear == (1)) ? 1 : (-1))"
+					m_paramsModified = 
+					[
+					]
+					m_proxyReadParams = 
+					[
+					]
+					m_proxyWriteParams = 
+					[
+					]
+					m_eScriptType = "ANIMSCRIPT_FUSE_STATEMACHINE"
+				},
+				
+				{
+					m_code = "(b_use_autoclear == (1)) ? 0 : (-1)"
+					m_paramsModified = 
+					[
+					]
+					m_proxyReadParams = 
+					[
+					]
+					m_proxyWriteParams = 
+					[
+					]
+					m_eScriptType = "ANIMSCRIPT_FUSE_STATEMACHINE"
+				},
+			]
+		}
+		m_settings = 
+		{
+			_class = "CAnimGraphSettingsManager"
+			m_settingsGroups = 
+			[
+				
+				{
+					_class = "CAnimGraphNetworkSettings"
+					m_bNetworkingEnabled = true
+				},
+			]
+		}
+		m_pStaticPoseCache = 
+		{
+			_class = "CStaticPoseCacheBuilder"
+			m_poses = 
+			[
+				
+				{
+					_class = "CCachedPose"
+					m_transforms = 
+					[
+						
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+							1.000000,
+							0.000000,
+							0.000000,
+							0.707096,
+							0.707118,
+						],
+						
+						[
+							0.000000,
+							-0.535253,
+							76.912598,
+							1.000000,
+							-0.258805,
+							0.000000,
+							0.000000,
+							0.965930,
+						],
+						
+						[
+							-0.000074,
+							-5.487453,
+							-0.760399,
+							1.000000,
+							0.258805,
+							0.000000,
+							0.000000,
+							0.965930,
+						],
+						
+						[
+							0.000000,
+							-0.535253,
+							69.070900,
+							1.000000,
+							-0.258805,
+							0.000000,
+							0.000000,
+							0.965930,
+						],
+						
+						[
+							0.000000,
+							-0.535253,
+							61.229198,
+							1.000000,
+							-0.258805,
+							0.000000,
+							0.000000,
+							0.965930,
+						],
+						
+						[
+							0.000000,
+							-0.535253,
+							53.387497,
+							1.000000,
+							-0.258805,
+							0.000000,
+							0.000000,
+							0.965930,
+						],
+						
+						[
+							0.000000,
+							-0.535253,
+							45.545795,
+							1.000000,
+							-0.258805,
+							0.000000,
+							0.000000,
+							0.965930,
+						],
+						
+						[
+							0.000000,
+							-0.535253,
+							37.704094,
+							1.000000,
+							-0.258805,
+							0.000000,
+							0.000000,
+							0.965930,
+						],
+						
+						[
+							0.000000,
+							-0.535253,
+							29.862394,
+							1.000000,
+							-0.258805,
+							0.000000,
+							0.000000,
+							0.965930,
+						],
+						
+						[
+							0.000000,
+							-0.535253,
+							22.020693,
+							1.000000,
+							-0.258805,
+							0.000000,
+							0.000000,
+							0.965930,
+						],
+						
+						[
+							0.000000,
+							-0.535253,
+							14.178991,
+							1.000000,
+							-0.258805,
+							0.000000,
+							0.000000,
+							0.965930,
+						],
+						
+						[
+							0.000000,
+							-0.535253,
+							6.337290,
+							1.000000,
+							-0.258805,
+							0.000000,
+							0.000000,
+							0.965930,
+						],
+					]
+					m_morphWeights = 
+					[
+					]
+					m_hSequence = 0
+					m_flCycle = 0.000000
+				},
+				
+				{
+					_class = "CCachedPose"
+					m_transforms = 
+					[
+						
+						[
+							0.000000,
+							0.000000,
+							0.000000,
+							1.000000,
+							0.000000,
+							0.000000,
+							0.707096,
+							0.707118,
+						],
+						
+						[
+							0.000000,
+							-0.535253,
+							76.912598,
+							1.000000,
+							-0.573550,
+							0.000000,
+							0.000000,
+							0.819171,
+						],
+						
+						[
+							-0.000069,
+							-5.487457,
+							-0.760391,
+							1.000000,
+							0.573550,
+							0.000000,
+							0.000000,
+							0.819171,
+						],
+						
+						[
+							0.000000,
+							-0.535253,
+							69.070900,
+							1.000000,
+							-0.573550,
+							0.000000,
+							0.000000,
+							0.819171,
+						],
+						
+						[
+							0.000000,
+							-0.535253,
+							61.229198,
+							1.000000,
+							-0.573550,
+							0.000000,
+							0.000000,
+							0.819171,
+						],
+						
+						[
+							0.000000,
+							-0.535253,
+							53.387497,
+							1.000000,
+							-0.573550,
+							0.000000,
+							0.000000,
+							0.819171,
+						],
+						
+						[
+							0.000000,
+							-0.535253,
+							45.545795,
+							1.000000,
+							-0.573550,
+							0.000000,
+							0.000000,
+							0.819171,
+						],
+						
+						[
+							0.000000,
+							-0.535253,
+							37.704094,
+							1.000000,
+							-0.573550,
+							0.000000,
+							0.000000,
+							0.819171,
+						],
+						
+						[
+							0.000000,
+							-0.535253,
+							29.862394,
+							1.000000,
+							-0.573550,
+							0.000000,
+							0.000000,
+							0.819171,
+						],
+						
+						[
+							0.000000,
+							-0.535253,
+							22.020693,
+							1.000000,
+							-0.573550,
+							0.000000,
+							0.000000,
+							0.819171,
+						],
+						
+						[
+							0.000000,
+							-0.535253,
+							14.178991,
+							1.000000,
+							-0.573550,
+							0.000000,
+							0.000000,
+							0.819171,
+						],
+						
+						[
+							0.000000,
+							-0.535253,
+							6.337290,
+							1.000000,
+							-0.573550,
+							0.000000,
+							0.000000,
+							0.819171,
+						],
+					]
+					m_morphWeights = 
+					[
+					]
+					m_hSequence = 2
+					m_flCycle = 0.000000
+				},
+			]
+			m_nBoneCount = 12
+			m_nMorphCount = 0
+		}
+		m_pSkeleton = 
+		{
+			_class = "CAnimSkeleton"
+			m_localSpaceTransforms = 
+			[
+				
+				[
+					0.000000,
+					0.000000,
+					0.000000,
+					1.000000,
+					0.000000,
+					0.000000,
+					0.707107,
+					0.707107,
+				],
+				
+				[
+					-0.000000,
+					-0.535248,
+					76.912437,
+					0.999999,
+					-0.258819,
+					0.000000,
+					0.000000,
+					0.965926,
+				],
+				
+				[
+					-0.000074,
+					-5.487255,
+					-0.760658,
+					0.999999,
+					0.258819,
+					0.000000,
+					0.000000,
+					0.965926,
+				],
+				
+				[
+					-0.000000,
+					-0.535255,
+					69.070717,
+					0.999999,
+					-0.258819,
+					0.000000,
+					0.000000,
+					0.965926,
+				],
+				
+				[
+					-0.000000,
+					-0.535253,
+					61.229050,
+					0.999999,
+					-0.258819,
+					0.000000,
+					0.000000,
+					0.965926,
+				],
+				
+				[
+					-0.000000,
+					-0.535252,
+					53.387367,
+					0.999999,
+					-0.258819,
+					0.000000,
+					0.000000,
+					0.965926,
+				],
+				
+				[
+					-0.000000,
+					-0.535255,
+					45.545689,
+					0.999999,
+					-0.258819,
+					0.000000,
+					0.000000,
+					0.965926,
+				],
+				
+				[
+					-0.000000,
+					-0.535253,
+					37.703999,
+					0.999999,
+					-0.258819,
+					0.000000,
+					0.000000,
+					0.965926,
+				],
+				
+				[
+					-0.000000,
+					-0.535253,
+					29.862324,
+					0.999999,
+					-0.258819,
+					0.000000,
+					0.000000,
+					0.965926,
+				],
+				
+				[
+					-0.000000,
+					-0.535252,
+					22.020645,
+					0.999999,
+					-0.258819,
+					0.000000,
+					0.000000,
+					0.965926,
+				],
+				
+				[
+					-0.000000,
+					-0.535252,
+					14.178959,
+					0.999999,
+					-0.258819,
+					0.000000,
+					0.000000,
+					0.965926,
+				],
+				
+				[
+					-0.000000,
+					-0.535252,
+					6.337275,
+					0.999999,
+					-0.258819,
+					0.000000,
+					0.000000,
+					0.965926,
+				],
+			]
+			m_modelSpaceTransforms = 
+			[
+				
+				[
+					0.000000,
+					0.000000,
+					0.000000,
+					1.000000,
+					0.000000,
+					0.000000,
+					0.707107,
+					0.707107,
+				],
+				
+				[
+					0.535248,
+					-0.000000,
+					76.912430,
+					0.999999,
+					-0.183013,
+					-0.183013,
+					0.683013,
+					0.683013,
+				],
+				
+				[
+					5.667676,
+					-0.000074,
+					78.997307,
+					0.999998,
+					-0.000000,
+					-0.000000,
+					0.707107,
+					0.707107,
+				],
+				
+				[
+					0.535255,
+					-0.000000,
+					69.070709,
+					0.999999,
+					-0.183013,
+					-0.183013,
+					0.683013,
+					0.683013,
+				],
+				
+				[
+					0.535253,
+					-0.000000,
+					61.229046,
+					0.999999,
+					-0.183013,
+					-0.183013,
+					0.683013,
+					0.683013,
+				],
+				
+				[
+					0.535251,
+					-0.000000,
+					53.387363,
+					0.999999,
+					-0.183013,
+					-0.183013,
+					0.683013,
+					0.683013,
+				],
+				
+				[
+					0.535255,
+					-0.000000,
+					45.545685,
+					0.999999,
+					-0.183013,
+					-0.183013,
+					0.683013,
+					0.683013,
+				],
+				
+				[
+					0.535253,
+					-0.000000,
+					37.703995,
+					0.999999,
+					-0.183013,
+					-0.183013,
+					0.683013,
+					0.683013,
+				],
+				
+				[
+					0.535253,
+					-0.000000,
+					29.862322,
+					0.999999,
+					-0.183013,
+					-0.183013,
+					0.683013,
+					0.683013,
+				],
+				
+				[
+					0.535251,
+					-0.000000,
+					22.020643,
+					0.999999,
+					-0.183013,
+					-0.183013,
+					0.683013,
+					0.683013,
+				],
+				
+				[
+					0.535251,
+					-0.000000,
+					14.178958,
+					0.999999,
+					-0.183013,
+					-0.183013,
+					0.683013,
+					0.683013,
+				],
+				
+				[
+					0.535252,
+					-0.000000,
+					6.337274,
+					0.999999,
+					-0.183013,
+					-0.183013,
+					0.683013,
+					0.683013,
+				],
+			]
+			m_boneNames = 
+			[
+				"root",
+				"slat001",
+				"rail",
+				"slat002",
+				"slat003",
+				"slat004",
+				"slat005",
+				"slat006",
+				"slat007",
+				"slat008",
+				"slat009",
+				"slat010",
+			]
+			m_children = 
+			[
+				
+				[
+					1,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+				],
+				
+				[
+					2,
+				],
+				
+				[
+				],
+				
+				[
+				],
+				
+				[
+				],
+				
+				[
+				],
+				
+				[
+				],
+				
+				[
+				],
+				
+				[
+				],
+				
+				[
+				],
+				
+				[
+				],
+				
+				[
+				],
+			]
+			m_parents = 
+			[
+				-1,
+				0,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+			]
+			m_feet = 
+			[
+			]
+			m_morphNames = 
+			[
+			]
+			m_lodBoneCounts = 
+			[
+			]
+		}
+		m_rootNodePath = 
+		{
+			m_path = 
+			[
+				
+				{
+					m_id = 1369201575
+				},
+				
+				{
+					m_id = 4294967295
+				},
+				
+				{
+					m_id = 4294967295
+				},
+				
+				{
+					m_id = 4294967295
+				},
+				
+				{
+					m_id = 4294967295
+				},
+				
+				{
+					m_id = 4294967295
+				},
+				
+				{
+					m_id = 4294967295
+				},
+				
+				{
+					m_id = 4294967295
+				},
+				
+				{
+					m_id = 4294967295
+				},
+				
+				{
+					m_id = 4294967295
+				},
+				
+				{
+					m_id = 4294967295
+				},
+			]
+			m_nCount = 1
+		}
+	}
+}

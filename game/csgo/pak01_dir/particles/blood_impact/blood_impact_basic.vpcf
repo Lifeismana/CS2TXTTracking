@@ -1,0 +1,61 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 16
+	m_bShouldSort = false
+	m_nBehaviorVersion = 12
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						8.666645,
+						56.817871,
+					]
+					m_angOffset = 
+					[
+						-32.612717,
+						94.961983,
+						-2.679056,
+					]
+					m_entityName = "self"
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "characters/models/ctm_diver/ctm_diver_variantc.vmdl"
+				m_sequenceName = "tools_preview"
+				m_hitboxSetName = "cstrike"
+				m_flParticleSimulationRate = 0.100000
+			}
+		},
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/blood_impact/blood_impact_directional_med.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/blood_impact/blood_impact_directional_spray_med.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/blood_impact/blood_impact_mist_away.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/blood_impact/blood_impact_directional_highvel_spray.vpcf"
+		},
+	]
+}
