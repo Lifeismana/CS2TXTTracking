@@ -1,6 +1,6 @@
 CRC: 00000000
 
-Images(1100):
+Images(1118):
  - panorama/images/econ/status_icons/10yearcoin_png.vtex [256x192 - 262B0C73]
  - panorama/images/econ/status_icons/10yearcoin_large_png.vtex [512x512 - F98201A9]
  - panorama/images/econ/status_icons/10yearcoin_small_png.vtex [64x48 - F92A07F3]
@@ -1025,6 +1025,24 @@ Images(1100):
  - panorama/images/econ/status_icons/service_medal_2023_lvl6_png.vtex [256x192 - B787DC0D]
  - panorama/images/econ/status_icons/service_medal_2023_lvl6_large_png.vtex [512x512 - 0B155AC5]
  - panorama/images/econ/status_icons/service_medal_2023_lvl6_small_png.vtex [64x48 - 114F310C]
+ - panorama/images/econ/status_icons/service_medal_2024_lvl1_png.vtex [512x384 - 9F707A36]
+ - panorama/images/econ/status_icons/service_medal_2024_lvl1_large_png.vtex [512x512 - 5BEEC894]
+ - panorama/images/econ/status_icons/service_medal_2024_lvl1_small_png.vtex [64x48 - 3899A595]
+ - panorama/images/econ/status_icons/service_medal_2024_lvl2_png.vtex [512x384 - 77950ABD]
+ - panorama/images/econ/status_icons/service_medal_2024_lvl2_large_png.vtex [512x512 - 86A4B00F]
+ - panorama/images/econ/status_icons/service_medal_2024_lvl2_small_png.vtex [64x48 - 15DC70BE]
+ - panorama/images/econ/status_icons/service_medal_2024_lvl3_png.vtex [512x384 - 78A38562]
+ - panorama/images/econ/status_icons/service_medal_2024_lvl3_large_png.vtex [512x512 - A5949567]
+ - panorama/images/econ/status_icons/service_medal_2024_lvl3_small_png.vtex [64x48 - E07DC72B]
+ - panorama/images/econ/status_icons/service_medal_2024_lvl4_png.vtex [512x384 - 239FB28D]
+ - panorama/images/econ/status_icons/service_medal_2024_lvl4_large_png.vtex [512x512 - 72566E56]
+ - panorama/images/econ/status_icons/service_medal_2024_lvl4_small_png.vtex [64x48 - 79AE32DB]
+ - panorama/images/econ/status_icons/service_medal_2024_lvl5_png.vtex [512x384 - 50802BE6]
+ - panorama/images/econ/status_icons/service_medal_2024_lvl5_large_png.vtex [512x512 - 3D18ED28]
+ - panorama/images/econ/status_icons/service_medal_2024_lvl5_small_png.vtex [64x48 - 6532EB12]
+ - panorama/images/econ/status_icons/service_medal_2024_lvl6_png.vtex [512x384 - 3B3BE832]
+ - panorama/images/econ/status_icons/service_medal_2024_lvl6_large_png.vtex [512x512 - 6053C3DB]
+ - panorama/images/econ/status_icons/service_medal_2024_lvl6_small_png.vtex [64x48 - A1646610]
  - panorama/images/econ/status_icons/skillgroup0_png.vtex [200x80 - 634D0F48]
  - panorama/images/econ/status_icons/skillgroup0_wingman_png.vtex [200x80 - D51AA329]
  - panorama/images/econ/status_icons/skillgroup1_png.vtex [200x80 - 729EC04F]
