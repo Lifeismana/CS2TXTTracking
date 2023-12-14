@@ -7,6 +7,7 @@ on:
                 description: 'Manifests to use'
                 required: false
                 default: ''
+    repository_dispatch:
 
 jobs:
     
